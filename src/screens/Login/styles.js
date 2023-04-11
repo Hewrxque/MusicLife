@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     flex: 0.5,
     marginHorizontal: 10,
     marginVertical: 10,
-    justifyContent: "center",
+   
     alignItems: "center",
     backgroundColor: '#A02788'
     },
@@ -38,7 +38,15 @@ const styles = StyleSheet.create({
         
     },
     button:{
-        backgroundColor: "#00FF00",
+        backgroundColor: "#ffffff",
+        width: "90%",
+        height: 50,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    text:{
+        color: '#000',
     }
     
 })
