@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: '#A02'
+  
     },
     content1:{
     flex: 0.5,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
    
     alignItems: "center",
-    backgroundColor: '#A02788'
+   
     },
     image: {
         width: "51%",
@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
         width: "90%",
         height: 50,
         margin: 10,
+        color: "#ffffff"
         
     },
     button:{
