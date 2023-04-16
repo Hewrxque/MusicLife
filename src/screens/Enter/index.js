@@ -26,6 +26,9 @@ export default function Enter({navigation}) {
           <TouchableOpacity style={styles.buttonRegistration} onPress={() => navigation.navigate('Registration')}>
             <Text style={styles.text}>Realizar Cadastro</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonConvidate} >
+            <Text style={styles.textConvidate}>Entrar como convidado</Text>
+          </TouchableOpacity>
         </View>
      
     </SafeAreaView>
