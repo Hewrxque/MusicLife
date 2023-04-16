@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
 import Login from '../src/screens/Login';
 import Enter from '../src/screens/Enter';
 import Registration from '../src/screens/Registration';
@@ -10,7 +11,9 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+    
     <NavigationContainer>
+      <StatusBar barStyle={'light-content'}/>
       <Stack.Navigator initialRouteName="Enter">
         <Stack.Screen
           name="Enter"
@@ -19,6 +22,7 @@ export default function App() {
             headerShown: false,
           }}
         />
+        
         <Stack.Screen
           name="Login"
           component={Login}
