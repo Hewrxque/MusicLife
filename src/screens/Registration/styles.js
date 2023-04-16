@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: height,
     width: width,
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#202020'
     },
 
     content:{
@@ -30,12 +30,12 @@ const styles = StyleSheet.create({
     },
     input:{
         borderWidth: 1,
-        borderColor: "#000",
+        borderColor: "#FFFFFF",
         borderRadius: 10,
         width: "90%",
         height: 50,
         margin: 10,
-        color: "#000",
+        color: "#FFFFFF",
         paddingHorizontal: 8
         
 

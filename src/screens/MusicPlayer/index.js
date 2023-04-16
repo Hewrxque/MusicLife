@@ -48,46 +48,37 @@ export default function MusicPlayer({navigation}) {
               <Text style={styles.durationText}>00:00</Text>
               <Text style={styles.durationText}>10:00</Text>
             </View>
-            </View>
-            {/* área dos botoes de controle das músicas */}
-            <View style={styles.musicButtonControl}>
-              <TouchableOpacity>
-                <Icon2
-                  name="skip-previous"
-                  size={60}
-                  color={'#00FF00'}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity>
-                <Icon2 name="play" size={80} color={'#00FF00'} />
-              </TouchableOpacity>
-              <TouchableOpacity>
-                <Icon2
-                  name="skip-next"
-                  size={60}
-                  color={'#00FF00'}
-                />
-              </TouchableOpacity>
-           
+          </View>
+          {/* área dos botoes de controle das músicas */}
+          <View style={styles.musicButtonControl}>
+            <TouchableOpacity>
+              <Icon2 name="skip-previous" size={60} color={'#00FF00'} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Icon2 name="play" size={80} color={'#00FF00'} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Icon2 name="skip-next" size={60} color={'#00FF00'} />
+            </TouchableOpacity>
           </View>
         </View>
         {/* área dos botoes de controle */}
         <View style={styles.buttonContainer}>
           <View style={styles.buttonIconWrapper}>
             <TouchableOpacity>
-              <Icon name="star-outline" size={40} color={'#FFFFFF'} />
+              <Icon name="star-outline" size={30} color={'#FFFFFF'} />
             </TouchableOpacity>
 
             <TouchableOpacity>
-              <Icon name="repeat-outline" size={40} color={'#FFFFFF'} />
+              <Icon name="repeat-outline" size={30} color={'#FFFFFF'} />
             </TouchableOpacity>
 
             <TouchableOpacity>
-              <Icon name="share-outline" size={40} color={'#FFFFFF'} />
+              <Icon name="share-outline" size={30} color={'#FFFFFF'} />
             </TouchableOpacity>
 
             <TouchableOpacity>
-              <Icon name="grid-outline" size={40} color={'#FFFFFF'} />
+              <Icon name="grid-outline" size={30} color={'#FFFFFF'} />
             </TouchableOpacity>
           </View>
         </View>
