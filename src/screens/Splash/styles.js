@@ -1,0 +1,56 @@
+import {StyleSheet, Dimensions} from 'react-native';
+const {height, width} = Dimensions.get('window');
+const styles = StyleSheet.create({
+    container:{
+    flex: 1,
+    height: height,
+    width: width,
+    backgroundColor: '#FFFFFF'
+    },
+
+    content:{
+    flex: 0.4,
+    marginHorizontal: 10,
+    marginVertical: 10,
+    justifyContent: "center",
+    alignItems: "center",
+  
+    },
+    content1:{
+    flex: 0.6,
+    marginHorizontal: 10,
+    marginVertical: 10,
+   
+    alignItems: "center",
+   
+    },
+    image: {
+        width: "51%",
+        height: 200
+    },
+    input:{
+        borderWidth: 1,
+        borderColor: "#FFFFFF",
+        borderRadius: 10,
+        width: "90%",
+        height: 50,
+        margin: 10,
+        color: "#ffffff"
+        
+    },
+    button:{
+        backgroundColor: "#ffffff",
+        width: "90%",
+        height: 50,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 20
+    },
+    text:{
+        color: '#000',
+        fontSize: 16
+    }
+    
+})
+export default styles;

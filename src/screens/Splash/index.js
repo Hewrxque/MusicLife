@@ -10,7 +10,7 @@ import {
 import styles from './styles';
 import Logo from '../../assets/ML.png';
 import LinearGradient from 'react-native-linear-gradient';
-export default function Login(navigation) {
+export default function Splash(navigation) {
   return (
     <SafeAreaView style={styles.container}>
       <LinearGradient
@@ -20,13 +20,14 @@ export default function Login(navigation) {
           <Image style={styles.image} source={Logo} />
         </View>
         <View style={styles.content1}>
-          <TextInput style={styles.input} placeholder="Email" />
-          <TextInput style={styles.input} placeholder="Senha" />
-          <TouchableOpacity style={{marginRight: 200}}>
-            <Text>Esqueci minha senha</Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Registration')}
+            style={styles.button}>
+            <Text style={styles.text}>Realizar Cadastro</Text>
           </TouchableOpacity>
-
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Login')}
+            style={styles.button}>
             <Text style={styles.text}>Login</Text>
           </TouchableOpacity>
         </View>
