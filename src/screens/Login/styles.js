@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     },
 
     content:{
-    flex: 0.5,
+    flex: 0.4,
     marginHorizontal: 10,
     marginVertical: 10,
     justifyContent: "center",
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   
     },
     content1:{
-    flex: 0.5,
+    flex: 0.6,
     marginHorizontal: 10,
     marginVertical: 10,
    
@@ -45,9 +45,11 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: 20
     },
     text:{
         color: '#000',
+        fontSize: 16
     }
     
 })
