@@ -22,7 +22,7 @@ export default function Login({navigation}) {
         <View style={styles.content1}>
           <TextInput style={styles.input} placeholder="Email" />
           <TextInput style={styles.input} placeholder="Senha" />
-          <TouchableOpacity style={{marginRight: 200}}>
+          <TouchableOpacity style={{marginLeft: 200}}>
             <Text>Esqueci minha senha</Text>
           </TouchableOpacity>
 
