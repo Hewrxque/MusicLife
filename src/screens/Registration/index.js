@@ -11,7 +11,7 @@ import {
 import styles from './styles';
 import Logo from '../../assets/ML.png';
 import LinearGradient from 'react-native-linear-gradient';
-export default function Login({navigation}) {
+export default function Registration({navigation}) {
   return (
     <ScrollView>
     <SafeAreaView style={styles.container}>
