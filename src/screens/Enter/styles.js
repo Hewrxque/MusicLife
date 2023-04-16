@@ -9,43 +9,43 @@ const styles = StyleSheet.create({
     },
 
     content:{
-    flex: 0.4,
+    flex: 0.5,
     marginHorizontal: 10,
     marginVertical: 10,
-    justifyContent: "center",
+    justifyContent: 'flex-end',
     alignItems: "center",
   
     },
     content1:{
-    flex: 0.6,
+    flex: 0.5,
     marginHorizontal: 10,
     marginVertical: 10,
-   
     alignItems: "center",
    
     },
     image: {
-        width: "51%",
-        height: 200
+        width: "60%",
+        height: 235,
+      
     },
-    input:{
-        borderWidth: 1,
-        borderColor: "#FFFFFF",
-        borderRadius: 10,
-        width: "90%",
-        height: 50,
-        margin: 10,
-        color: "#ffffff"
-        
-    },
-    button:{
-        backgroundColor: "#ffffff",
+    buttonRegistration:{
+        backgroundColor: "#00FF00",
         width: "90%",
         height: 50,
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 20
+        marginBottom: 20,
+    },buttonLogin:{
+        backgroundColor: "#FFFFFF",
+        width: "90%",
+        height: 50,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 20,
+        borderColor:  "#00FF00",
+        borderWidth: 1
     },
     text:{
         color: '#000',

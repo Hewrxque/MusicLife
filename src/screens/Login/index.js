@@ -6,16 +6,16 @@ import {
   Image,
   TouchableOpacity,
   TextInput,
+  ScrollView
 } from 'react-native';
 import styles from './styles';
 import Logo from '../../assets/ML.png';
 import LinearGradient from 'react-native-linear-gradient';
-export default function Login(navigation) {
+export default function Login({navigation}) {
   return (
+    <ScrollView>
     <SafeAreaView style={styles.container}>
-      <LinearGradient
-        colors={['#000000', '#202020', '#ffffff']}
-        style={{flex: 1}}>
+     
         <View style={styles.content}>
           <Image style={styles.image} source={Logo} />
         </View>
@@ -30,7 +30,9 @@ export default function Login(navigation) {
             <Text style={styles.text}>Login</Text>
           </TouchableOpacity>
         </View>
-      </LinearGradient>
+     
     </SafeAreaView>
+    </ScrollView>
   );
 }
+

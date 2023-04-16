@@ -30,22 +30,23 @@ const styles = StyleSheet.create({
     },
     input:{
         borderWidth: 1,
-        borderColor: "#FFFFFF",
+        borderColor: "#000",
         borderRadius: 10,
         width: "90%",
         height: 50,
         margin: 10,
-        color: "#ffffff"
-        
+        color: "#000",
+        paddingHorizontal: 8
     },
     button:{
-        backgroundColor: "#ffffff",
+        backgroundColor: "#00FF00",
         width: "90%",
         height: 50,
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 20
+        marginTop: 20,
+      
     },
     text:{
         color: '#000',
