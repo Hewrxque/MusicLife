@@ -21,10 +21,10 @@ export default function Enter({navigation}) {
           <TouchableOpacity
             style={styles.buttonLogin}
             onPress={() => navigation.navigate('Login')}>
-            <Text style={styles.text}>Login</Text>
+            <Text style={styles.textLogin}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonRegistration} onPress={() => navigation.navigate('Registration')}>
-            <Text style={styles.text}>Realizar Cadastro</Text>
+            <Text style={styles.textRegistration}>Realizar Cadastro</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonConvidate} onPress={() => navigation.navigate('MusicPlayer')}>
             <Text style={styles.textConvidate}>Entrar como convidado</Text>

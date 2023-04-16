@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: height,
     width: width,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#202020',
   },
 
   content: {
@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   buttonLogin: {
-    backgroundColor: '#FFFFFF',
     width: '90%',
     height: 50,
     borderRadius: 10,
@@ -50,12 +49,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 20,
   },
-  text: {
-    color: '#000',
+  textLogin: {
+    color: '#00FF00',
+    fontSize: 16,
+  },
+  textRegistration: {
+    color: '#000000',
     fontSize: 16,
   },
   textConvidate: {
-    color: '#00FF00',
+    color: '#FFFFFF',
     fontSize: 16,
   },
 });

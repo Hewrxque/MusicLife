@@ -30,6 +30,7 @@ export default function App() {
             headerShown: true,
             headerTransparent: true,
             title: '',
+            headerTintColor: '#FFFFFF'
           }}
         />
         <Stack.Screen
@@ -39,6 +40,7 @@ export default function App() {
             headerShown: true,
             headerTransparent: true,
             title: '',
+            headerTintColor: '#FFFFFF'
           }}
         />
          <Stack.Screen
