@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {
   View,
   Text,
@@ -7,21 +7,68 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  FlatList,
+  Animated,
 } from 'react-native';
 import styles from './styles';
 import ImgMusic from '../../assets/akatsuki.png';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import Slider from '@react-native-community/slider';
+import song from '../../models/data';
+import songs from '../../models/data';
+
 export default function MusicPlayer({navigation}) {
+  //Custom State
+  const [songIndex, setsongIndex] = useState(0);
+
+  //Custom Reference
+  const scrollX = useRef(new Animated.Value(0)).current;
+  useEffect(() => {
+    scrollX.addListener(({value}) => {
+      // console.log(`ScrollX : ${value} | Device Width : ${width} `);
+      const index = Math.round();
+
+      console.log(`Index : ${index}`);
+    });
+  }, []);
+
+  const renderSongs = ({index, item}) => {
+    return (
+      <Animated.View style={styles.mainWrapper}>
+        <View style={[styles.imageWrapper, styles.elevationImage]}>
+          <Image source={item.artwork} style={styles.musicImage} />
+        </View>
+      </Animated.View>
+    );
+  };
+
   return (
     <ScrollView>
       <SafeAreaView style={styles.container}>
         <View style={styles.content}>
           {/* área da imagem */}
-          <View style={[styles.imageWrapper, styles.elevationImage]}>
-            <Image source={ImgMusic} style={styles.musicImage} />
-          </View>
+
+          <Animated.FlatList
+            renderItem={renderSongs}
+            data={songs}
+            keyExtractor={item => item.id}
+            horizontal
+            pagingEnabled
+            showsHorizontalScrollIndicator={false}
+            scrollEventThrottle={16}
+            onScroll={Animated.event(
+              [
+                {
+                  nativeEvent: {
+                    contentOffset: {x: scrollX},
+                  },
+                },
+              ],
+              {useNativeDriver: true},
+            )}
+          />
+
           {/* área de texto da música*/}
           <View>
             <Text style={[styles.songTitle, styles.songContent]}>

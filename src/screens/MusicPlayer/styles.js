@@ -10,15 +10,15 @@ const styles = StyleSheet.create({
 
   content: {
     flex: 1,
-    marginHorizontal: 10,
-    marginVertical: 10,
+   // marginHorizontal: 10,
+   // marginVertical: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   content1: {
     flex: 0.6,
-    marginHorizontal: 10,
-    marginVertical: 10,
+  // marginHorizontal: 10,
+   // marginVertical: 10,
     alignItems: 'center',
   },
   //Botoes 
@@ -38,17 +38,22 @@ const styles = StyleSheet.create({
   //Imagem
   imageWrapper: {
     width: 300,
-    height: 300,
-    marginBottom: 20,
-    marginTop: 20,
+    height: 340,
+    marginBottom: 25,
   },
   musicImage: {
     width: '100%',
     height: '100%',
-    borderRadius: 1000,
+    borderRadius: 15,
   },
   elevationImage: {
-    elevation: 20,
+    elevation: 5,
+  },
+  mainWrapper: {
+    width: width,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 25,
   },
   //Título da Música e Artista
   songContent: {
