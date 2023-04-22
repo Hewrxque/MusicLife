@@ -18,18 +18,19 @@ import Slider from '@react-native-community/slider';
 import song from '../../models/data';
 import songs from '../../models/data';
 
+
+
 export default function MusicPlayer({navigation}) {
   //Custom State
   const [songIndex, setsongIndex] = useState(0);
-
   //Custom Reference
   const scrollX = useRef(new Animated.Value(0)).current;
   useEffect(() => {
     scrollX.addListener(({value}) => {
       // console.log(`ScrollX : ${value} | Device Width : ${width} `);
-      const index = Math.round();
+      //   const index = Math.round(value / width);
 
-      console.log(`Index : ${index}`);
+      //console.log(`Index : ${index}`);
     });
   }, []);
 
