@@ -4,6 +4,7 @@ import Login from '../src/screens/Login';
 import Enter from '../src/screens/Enter';
 import Registration from '../src/screens/Registration';
 import MusicPlayer from '../src/screens/MusicPlayer'
+import AllMusics from '../src/screens/AllMusics'
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -46,6 +47,13 @@ export default function App() {
          <Stack.Screen
           name="MusicPlayer"
           component={MusicPlayer}
+          options={{
+            headerShown: false,
+          }}
+        />
+         <Stack.Screen
+          name="AllMusics"
+          component={AllMusics}
           options={{
             headerShown: false,
           }}
