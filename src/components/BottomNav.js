@@ -5,9 +5,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 export default function BottomNav({activepage}){
     return(
         <View style={styles.container}>
+            <Icon name="playlist-play" size={50} color={'#fff'}/>
             <Icon name="headphones" size={50} color={'#fff'}/>
-            <Icon name="headphones" size={50} color={'#fff'}/>
-            <Icon name="headphones" size={50} color={'#fff'}/>
+            <Icon name="music-box-multiple" size={50} color={'#fff'}/>
         </View>
     )
 }
