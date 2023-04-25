@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
 
   content: {
-    flex: 0.5,
+    flex: 1,
     marginHorizontal: 10,
     marginVertical: 10,
     justifyContent: 'flex-end',

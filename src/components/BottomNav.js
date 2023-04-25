@@ -10,19 +10,48 @@ export default function BottomNav({activepage}) {
         <Icon
           name="music-box-multiple"
           size={50}
-          color={'#fff'}
+          color={'#000'}
           style={styles.iconActivate}
         />
       ) : (
         <Icon
           name="music-box-multiple"
           size={50}
-          color={'#fff'}
+          color={'#000'}
           style={styles.icon}
         />
       )}
-      <Icon name="playlist-play" size={50} color={'#fff'} />
-      <Icon name="headphones" size={50} color={'#fff'} />
+        {activepage == 'player' ? (
+        <Icon
+          name="headphones"
+          size={50}
+          color={'#000'}
+          style={styles.iconActivate}
+        />
+      ) : (
+        <Icon
+          name="headphones"
+          size={50}
+          color={'#000'}
+          style={styles.icon}
+        />
+      )}
+       {activepage == 'player' ? (
+        <Icon
+          name="playlist-play"
+          size={50}
+          color={'#000'}
+          style={styles.iconActivate}
+        />
+      ) : (
+        <Icon
+          name="playlist-play"
+          size={50}
+          color={'#000'}
+          style={styles.icon}
+        />
+      )}
+     
     </View>
   );
 }
@@ -33,7 +62,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'flex-end',
+    backgroundColor: '#fff',
+    borderTopRightRadius: 20,
+    borderTopLeftRadius: 20
   },
-  icon: {},
-  iconActivate: {},
+  icon: {
+    color: '#000',
+    marginHorizontal: 100
+  },
+  iconActivate: {
+    color: '#000',
+    backgroundColor: '#00FF00',
+    borderRadius: 50,
+    bottom: 0,
+    position: 'absolute',
+    padding: 10,
+    left: '40%'
+  },
 });
