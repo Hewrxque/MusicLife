@@ -6,6 +6,7 @@ import Registration from '../src/screens/Registration';
 import MusicPlayer from '../src/screens/MusicPlayer'
 import AllPlaylists from '../src/screens/AllPlaylists'
 import AllMusics from '../src/screens/AllMusics'
+import Player from '../src/screens/Player'
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -63,6 +64,13 @@ export default function App() {
         <Stack.Screen
           name="AllPlaylists"
           component={AllPlaylists}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Player"
+          component={Player}
           options={{
             headerShown: false,
           }}

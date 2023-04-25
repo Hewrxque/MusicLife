@@ -1,11 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export default function BottomNav({activepage}) {
-  //console.log(activepage)
+  console.log(activepage)
   return (
     <View style={styles.container}>
+      
       {activepage == 'allmusic' ? (
         <Icon
           name="music-box-multiple"
@@ -36,7 +37,7 @@ export default function BottomNav({activepage}) {
           style={styles.icon}
         />
       )}
-       {activepage == 'player' ? (
+       {activepage == 'playlists' ? (
         <Icon
           name="playlist-play"
           size={50}

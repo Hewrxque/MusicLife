@@ -12,17 +12,17 @@ import Logo from '../../assets/ML.png';
 import LinearGradient from 'react-native-linear-gradient';
 import BottomNav from '../../components/BottomNav';
 
-export default function AllPlaylists({navigation}) {
+export default function Player({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
     <View style={styles.content}>
         <Text>
-            All Playlists
+            Player
         </Text>
         
     </View>
     <View>
-        <BottomNav activepage={'playlists'}/>
+        <BottomNav activepage={'player'}/>
     </View>
     </SafeAreaView>
   );

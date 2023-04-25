@@ -17,7 +17,7 @@ export default function AllMusics({navigation}) {
     <SafeAreaView style={styles.container}>
     <View style={styles.content}>
         <Text>
-            aa
+            All Musics
         </Text>
         
     </View>
