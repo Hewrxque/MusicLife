@@ -18,6 +18,7 @@ import Slider from '@react-native-community/slider';
 import song from '../../models/data';
 import songs from '../../models/data';
 import BottomNav from '../../components/BottomNav';
+import { transform } from 'typescript';
 
 export default function Player({navigation}) {
   const renderSongs = ({index, item}) => {
@@ -29,7 +30,32 @@ export default function Player({navigation}) {
       </Animated.View>
     );
   };
-// controle do play ou pause
+
+  let rotateValueHolder = new Animated.Value(0);
+  const startImageRotateFunction = () => {
+    rotateValueHolder.setValue(0);
+    Animated.timing(rotateValueHolder, {
+      toValue: 1,
+      duration: 3000,
+      useNativeDriver: false,
+    }).start(() => startImageRotateFunction());
+  };
+
+  useEffect(() => {
+    if (isplaying == true) {
+      startImageRotateFunction();
+    } else {
+      rotateValueHolder.setValue(0);
+      rotateValueHolder.stopAnimation();
+    }
+  }, [isplaying]);
+
+
+  const RotateData = rotateValueHolder.interpolate({
+    inputRange: [0, 1], 
+    outputRange: [`0deg`, `360deg`]
+  })
+  // controle do play ou pause
   const [isplaying, setisPlaying] = useState(false);
 
   return (
@@ -38,15 +64,11 @@ export default function Player({navigation}) {
         <View style={styles.content}>
           {/* área da imagem */}
 
-          <Animated.FlatList
-            renderItem={renderSongs}
-            data={songs}
-            keyExtractor={item => item.id}
-            horizontal
-            pagingEnabled
-            showsHorizontalScrollIndicator={false}
-            scrollEventThrottle={16}
-          />
+          <View style={styles.mainWrapper}>
+            <View style={[styles.imageWrapper, styles.elevationImage]}>
+              <Animated.Image source={ImgMusic} style={[styles.musicImage,  {transform: [{ rotate: RotateData}]}]}/>
+            </View>
+          </View>
 
           {/* área de texto da música*/}
           <View>
@@ -115,3 +137,13 @@ export default function Player({navigation}) {
     </ScrollView>
   );
 }
+/*
+<Animated.FlatList
+renderItem={renderSongs}
+data={songs}
+keyExtractor={item => item.id}
+horizontal
+pagingEnabled
+showsHorizontalScrollIndicator={false}
+scrollEventThrottle={16}
+/>*/
