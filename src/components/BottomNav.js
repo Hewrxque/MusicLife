@@ -38,6 +38,7 @@ export default function BottomNav({activepage, navigation}) {
           onPress={() => navigation.navigate('Player')}
         />
       )}
+
       {activepage == 'AllPlaylists' ? (
         <Icon
           name="playlist-play"

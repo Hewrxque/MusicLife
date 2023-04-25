@@ -4,7 +4,7 @@ import Login from '../src/screens/Login';
 import Enter from '../src/screens/Enter';
 import Registration from '../src/screens/Registration';
 import MusicPlayer from '../src/screens/MusicPlayer';
-import AllPlaylists from '../src/screens/AllPlaylists';
+import AllPlaylists from './screens/AllPlaylists';
 import AllMusics from '../src/screens/AllMusics';
 import Player from '../src/screens/Player';
 import {NavigationContainer} from '@react-navigation/native';
