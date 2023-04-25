@@ -10,17 +10,21 @@ import {
 import styles from './styles';
 import Logo from '../../assets/ML.png';
 import LinearGradient from 'react-native-linear-gradient';
+import BottomNav from '../../components/BottomNav';
+
 export default function AllMusics({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
-    <View>
+    <View style={styles.content}>
         <Text>
             aa
         </Text>
+        
+    </View>
+    <View>
+        <BottomNav/>
     </View>
     </SafeAreaView>
   );
 }
-/*<LinearGradient
-colors={['#000000', '#202020', '#ffffff']}
-style={{flex: 1}}/>*/
+
