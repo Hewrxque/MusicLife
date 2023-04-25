@@ -22,7 +22,7 @@ export default function AllMusics({navigation}) {
         
     </View>
     <View>
-        <BottomNav activepage={'allmusic'}/>
+        <BottomNav activepage={'AllMusics'} navigation={navigation}/>
     </View>
     </SafeAreaView>
   );

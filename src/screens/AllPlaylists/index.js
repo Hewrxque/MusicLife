@@ -8,8 +8,7 @@ import {
   TextInput,
 } from 'react-native';
 import styles from './styles';
-import Logo from '../../assets/ML.png';
-import LinearGradient from 'react-native-linear-gradient';
+
 import BottomNav from '../../components/BottomNav';
 
 export default function AllPlaylists({navigation}) {
@@ -22,7 +21,7 @@ export default function AllPlaylists({navigation}) {
         
     </View>
     <View>
-        <BottomNav activepage={'playlists'}/>
+        <BottomNav activepage={'AllPlaylists'} navigation={navigation}/>
     </View>
     </SafeAreaView>
   );

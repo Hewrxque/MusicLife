@@ -22,7 +22,7 @@ export default function Player({navigation}) {
         
     </View>
     <View>
-        <BottomNav activepage={'player'}/>
+        <BottomNav activepage={'Player'} navigation={navigation}/>
     </View>
     </SafeAreaView>
   );

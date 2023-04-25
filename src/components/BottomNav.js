@@ -2,12 +2,11 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export default function BottomNav({activepage}) {
-  console.log(activepage)
+export default function BottomNav({activepage, navigation}) {
+  console.log(activepage);
   return (
     <View style={styles.container}>
-      
-      {activepage == 'allmusic' ? (
+      {activepage == 'AllMusics' ? (
         <Icon
           name="music-box-multiple"
           size={50}
@@ -20,9 +19,10 @@ export default function BottomNav({activepage}) {
           size={50}
           color={'#000'}
           style={styles.icon}
+          onPress={() => navigation.navigate('AllMusics')}
         />
       )}
-        {activepage == 'player' ? (
+      {activepage == 'Player' ? (
         <Icon
           name="headphones"
           size={50}
@@ -35,9 +35,10 @@ export default function BottomNav({activepage}) {
           size={50}
           color={'#000'}
           style={styles.icon}
+          onPress={() => navigation.navigate('Player')}
         />
       )}
-       {activepage == 'playlists' ? (
+      {activepage == 'AllPlaylists' ? (
         <Icon
           name="playlist-play"
           size={50}
@@ -50,9 +51,9 @@ export default function BottomNav({activepage}) {
           size={50}
           color={'#000'}
           style={styles.icon}
+          onPress={() => navigation.navigate('AllPlaylists')}
         />
       )}
-     
     </View>
   );
 }
@@ -65,11 +66,11 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     backgroundColor: '#fff',
     borderTopRightRadius: 20,
-    borderTopLeftRadius: 20
+    borderTopLeftRadius: 20,
   },
   icon: {
     color: '#000',
-    marginHorizontal: 100
+    marginHorizontal: 100,
   },
   iconActivate: {
     color: '#000',
@@ -78,6 +79,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     position: 'absolute',
     padding: 10,
-    left: '40%'
+    left: '40%',
   },
 });
