@@ -9,6 +9,7 @@ import {
   ScrollView,
   FlatList,
   Animated,
+  Button
 } from 'react-native';
 import styles from './styles';
 import ImgMusic from '../../assets/akatsuki.png';
@@ -20,6 +21,7 @@ import songs from '../../models/data';
 import BottomNav from '../../components/BottomNav';
 import {transform} from 'typescript';
 import Sound from 'react-native-sound';
+import AudioFile from 'react-native-sound';
 import som from '../../sounds/sex.mp3';
 export default function Player({navigation}) {
   const renderSongs = ({index, item}) => {
@@ -31,7 +33,7 @@ export default function Player({navigation}) {
       </Animated.View>
     );
   };
-
+  const image = require('../../sounds/sex.mp3');
   //Animacao da imagem
   let rotateValueHolder = new Animated.Value(0);
   const startImageRotateFunction = () => {
@@ -69,10 +71,21 @@ export default function Player({navigation}) {
   function togglePlayPause() {
     if (sound.isPlaying()) {
       sound.pause();
+     
     } else {
       sound.play();
+      
     }
   }
+  const audioFile = new AudioFile(som, AudioFile.MAIN_BUNDLE, (error) => {
+    if (error) {
+      console.log('Falha ao carregar a imagem:', error);
+      return;
+    }
+  
+    const metadata = audioFile.getDuration();
+    const albumCover = metadata?.tag?.picture;
+  });
   return (
     <ScrollView>
       <SafeAreaView style={styles.container}>
@@ -82,7 +95,7 @@ export default function Player({navigation}) {
           <View style={styles.mainWrapper}>
             <View style={[styles.imageWrapper, styles.elevationImage]}>
               <Animated.Image
-                source={ImgMusic}
+                source={image}
                 style={[styles.musicImage, {transform: [{rotate: RotateData}]}]}
               />
             </View>
@@ -118,32 +131,20 @@ export default function Player({navigation}) {
           {/* área dos botoes de controle das músicas */}
           <View style={styles.musicButtonControl}>
             <TouchableOpacity>
-              <Icon2 name="skip-previous" size={60} color={'#00FF00'} />
+              <Icon2 name="skip-previous" size={60} color={'#fff'} />
             </TouchableOpacity>
-
-            {isplaying == false ? (
-              <TouchableOpacity>
-                <Icon2
-                  name="play"
-                  size={80}
-                  color={'#00FF00'}
-                  //onPress={() => setisPlaying(togglePlayPause)}
-                  onPress={togglePlayPause}
-                />
-              </TouchableOpacity>
-            ) : (
-              <TouchableOpacity>
-                <Icon2
-                  name="pause"
-                  size={80}
-                  color={'#00FF00'}
-                  onPress={() => setisPlaying(false)}
-                />
-              </TouchableOpacity>
-            )}
+           {/* funcao de controle do player*/}
+          
+           <TouchableOpacity onPress={togglePlayPause}>
+        {isplaying ? (
+          <Icon name="pause" size={50} color="#fff" />
+        ) : (
+          <Icon name="play" size={50} color="#fff" />
+        )}
+      </TouchableOpacity>
 
             <TouchableOpacity>
-              <Icon2 name="skip-next" size={60} color={'#00FF00'} />
+              <Icon2 name="skip-next" size={60} color={'#fff'} />
             </TouchableOpacity>
           </View>
         </View>

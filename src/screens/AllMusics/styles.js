@@ -17,10 +17,27 @@ const styles = StyleSheet.create({
   },
   content1: {
     flex: 0.5,
-    marginHorizontal: 10,
-    marginVertical: 10,
+    
     alignItems: 'center',
   },
-
+  imgMusics: {
+    width: 80,
+    height: 80,
+    marginRight: 220
+  },
+  item: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+    justifyContent: 'space-around',
+    width: '100%',
+    marginVertical: 2,
+    backgroundColor: '#000',
+    borderRadius: 20
+  },
+  textMusic: {
+    fontSize: 16,
+    color: '#fff',
+  },
 });
 export default styles;

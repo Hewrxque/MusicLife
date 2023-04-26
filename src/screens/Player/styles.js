@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   durationText:{
-    color: '#00FF00',
+    color: '#fff',
     fontSize: 12,
     fontWeight: '600',
   },
