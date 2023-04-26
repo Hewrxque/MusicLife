@@ -10,8 +10,6 @@ const styles = StyleSheet.create({
 
   content: {
     flex: 1,
-    marginHorizontal: 10,
-    marginVertical: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -21,7 +19,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   imgMusics: {
-    width: 80,
+    width: 90,
+    borderRadius: 15,
     height: 80,
     marginRight: 220
   },
@@ -29,8 +28,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
-    justifyContent: 'space-around',
-    width: '100%',
+   
+    width: '99%',
     marginVertical: 2,
     backgroundColor: '#000',
     borderRadius: 20
