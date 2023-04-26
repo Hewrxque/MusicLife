@@ -60,7 +60,7 @@ export default function Player({navigation}) {
 
   // controle do play ou pause
   const [isplaying, setisPlaying] = useState(false);
-  const sound = new Sound('sex.mp3', Sound.MAIN_BUNDLE, error => {
+  const sound = new Sound(som, Sound.MAIN_BUNDLE, error => {
     if (error) {
       console.log('Falha ao carregar o som', error);
     }
@@ -77,7 +77,6 @@ export default function Player({navigation}) {
       }
     });
 
-    // pausa a reprodução do som
   };
 
   return (
