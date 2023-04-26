@@ -20,7 +20,7 @@ import songs from '../../models/data';
 import BottomNav from '../../components/BottomNav';
 import {transform} from 'typescript';
 import Sound from 'react-native-sound';
-import som from '../../sounds/set.mp3';
+import som from '../../sounds/sex.mp3';
 export default function Player({navigation}) {
   const renderSongs = ({index, item}) => {
     return (
@@ -60,7 +60,7 @@ export default function Player({navigation}) {
 
   // controle do play ou pause
   const [isplaying, setisPlaying] = useState(false);
-  const sound = new Sound('set.mp3', Sound.MAIN_BUNDLE, error => {
+  const sound = new Sound('sex.mp3', Sound.MAIN_BUNDLE, error => {
     if (error) {
       console.log('Falha ao carregar o som', error);
     }
@@ -79,11 +79,7 @@ export default function Player({navigation}) {
 
     // pausa a reprodução do som
   };
-  const pauseSound = () => {
-    if (sound && sound.isPlaying()) {
-      sound.pause();
-    }
-  }
+
   return (
     <ScrollView>
       <SafeAreaView style={styles.container}>
@@ -148,7 +144,7 @@ export default function Player({navigation}) {
                   name="pause"
                   size={80}
                   color={'#00FF00'}
-                  onPress={pauseSound}
+                  onPress={() => setisPlaying(false)}
                 />
               </TouchableOpacity>
             )}

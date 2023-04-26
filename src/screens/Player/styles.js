@@ -98,3 +98,25 @@ const styles = StyleSheet.create({
   }
 });
 export default styles;
+/*
+ {isplaying == false ? (
+              <TouchableOpacity>
+                <Icon2
+                  name="play"
+                  size={80}
+                  color={'#00FF00'}
+                  //onPress={() => setisPlaying(true)}
+                  onPress={playSound}
+                />
+              </TouchableOpacity>
+            ) : (
+              <TouchableOpacity>
+                <Icon2
+                  name="pause"
+                  size={80}
+                  color={'#00FF00'}
+                  onPress={() => setisPlaying(false)}
+                />
+              </TouchableOpacity>
+            )}
+            */
