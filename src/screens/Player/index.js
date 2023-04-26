@@ -18,8 +18,9 @@ import Slider from '@react-native-community/slider';
 import song from '../../models/data';
 import songs from '../../models/data';
 import BottomNav from '../../components/BottomNav';
-import { transform } from 'typescript';
-
+import {transform} from 'typescript';
+import Sound from 'react-native-sound';
+import som from '../../sounds/set.mp3';
 export default function Player({navigation}) {
   const renderSongs = ({index, item}) => {
     return (
@@ -31,6 +32,7 @@ export default function Player({navigation}) {
     );
   };
 
+  //Animacao da imagem
   let rotateValueHolder = new Animated.Value(0);
   const startImageRotateFunction = () => {
     rotateValueHolder.setValue(0);
@@ -50,14 +52,38 @@ export default function Player({navigation}) {
     }
   }, [isplaying]);
 
-
   const RotateData = rotateValueHolder.interpolate({
-    inputRange: [0, 1], 
-    outputRange: [`0deg`, `360deg`]
-  })
+    inputRange: [0, 1],
+    outputRange: [`0deg`, `360deg`],
+  });
+  //Final da animacao da imagem
+
   // controle do play ou pause
   const [isplaying, setisPlaying] = useState(false);
+  const sound = new Sound('set.mp3', Sound.MAIN_BUNDLE, error => {
+    if (error) {
+      console.log('Falha ao carregar o som', error);
+    }
+  });
 
+  const playSound = () => {
+    setisPlaying(true);
+    sound.play(success => {
+      if (success) {
+        setisPlaying(false);
+        console.log('Som reproduzido com sucesso');
+      } else {
+        console.log('Falha ao reproduzir o som');
+      }
+    });
+
+    // pausa a reprodução do som
+  };
+  const pauseSound = () => {
+    if (sound && sound.isPlaying()) {
+      sound.pause();
+    }
+  }
   return (
     <ScrollView>
       <SafeAreaView style={styles.container}>
@@ -66,7 +92,10 @@ export default function Player({navigation}) {
 
           <View style={styles.mainWrapper}>
             <View style={[styles.imageWrapper, styles.elevationImage]}>
-              <Animated.Image source={ImgMusic} style={[styles.musicImage,  {transform: [{ rotate: RotateData}]}]}/>
+              <Animated.Image
+                source={ImgMusic}
+                style={[styles.musicImage, {transform: [{rotate: RotateData}]}]}
+              />
             </View>
           </View>
 
@@ -109,7 +138,8 @@ export default function Player({navigation}) {
                   name="play"
                   size={80}
                   color={'#00FF00'}
-                  onPress={() => setisPlaying(true)}
+                  //onPress={() => setisPlaying(true)}
+                  onPress={playSound}
                 />
               </TouchableOpacity>
             ) : (
@@ -118,7 +148,7 @@ export default function Player({navigation}) {
                   name="pause"
                   size={80}
                   color={'#00FF00'}
-                  onPress={() => setisPlaying(false)}
+                  onPress={pauseSound}
                 />
               </TouchableOpacity>
             )}
@@ -137,13 +167,3 @@ export default function Player({navigation}) {
     </ScrollView>
   );
 }
-/*
-<Animated.FlatList
-renderItem={renderSongs}
-data={songs}
-keyExtractor={item => item.id}
-horizontal
-pagingEnabled
-showsHorizontalScrollIndicator={false}
-scrollEventThrottle={16}
-/>*/

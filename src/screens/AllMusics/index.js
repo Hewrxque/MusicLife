@@ -12,6 +12,7 @@ import Logo from '../../assets/ML.png';
 import LinearGradient from 'react-native-linear-gradient';
 import BottomNav from '../../components/BottomNav';
 
+
 export default function AllMusics({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
