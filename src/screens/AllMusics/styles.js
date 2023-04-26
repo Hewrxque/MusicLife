@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 10,
     marginVertical: 10,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   content1: {

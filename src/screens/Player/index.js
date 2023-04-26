@@ -66,19 +66,13 @@ export default function Player({navigation}) {
     }
   });
 
-  const playSound = () => {
-    setisPlaying(true);
-    sound.play(success => {
-      if (success) {
-        setisPlaying(false);
-        console.log('Som reproduzido com sucesso');
-      } else {
-        console.log('Falha ao reproduzir o som');
-      }
-    });
-
-  };
-
+  function togglePlayPause() {
+    if (sound.isPlaying()) {
+      sound.pause();
+    } else {
+      sound.play();
+    }
+  }
   return (
     <ScrollView>
       <SafeAreaView style={styles.container}>
@@ -133,8 +127,8 @@ export default function Player({navigation}) {
                   name="play"
                   size={80}
                   color={'#00FF00'}
-                  //onPress={() => setisPlaying(true)}
-                  onPress={playSound}
+                  //onPress={() => setisPlaying(togglePlayPause)}
+                  onPress={togglePlayPause}
                 />
               </TouchableOpacity>
             ) : (
