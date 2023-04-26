@@ -40,7 +40,7 @@ const renderItem = ({ item }) => (
 
 export default function AllMusics({navigation}) {
   return (
-    <ScrollView>
+   
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
       <FlatList
@@ -53,6 +53,6 @@ export default function AllMusics({navigation}) {
         <BottomNav activepage={'AllMusics'} navigation={navigation} />
       </View>
     </SafeAreaView>
-    </ScrollView>
+   
   );
 }

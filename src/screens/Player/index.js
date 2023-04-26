@@ -16,8 +16,6 @@ import ImgMusic from '../../assets/akatsuki.png';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import Slider from '@react-native-community/slider';
-import song from '../../models/data';
-import songs from '../../models/data';
 import BottomNav from '../../components/BottomNav';
 import {transform} from 'typescript';
 import Sound from 'react-native-sound';
@@ -33,7 +31,7 @@ export default function Player({navigation}) {
       </Animated.View>
     );
   };
-  const image = require('../../sounds/sex.mp3');
+
   //Animacao da imagem
   let rotateValueHolder = new Animated.Value(0);
   const startImageRotateFunction = () => {
@@ -71,7 +69,7 @@ export default function Player({navigation}) {
   function togglePlayPause() {
     if (sound.isPlaying()) {
       sound.pause();
-     
+    
     } else {
       sound.play();
       
@@ -95,7 +93,7 @@ export default function Player({navigation}) {
           <View style={styles.mainWrapper}>
             <View style={[styles.imageWrapper, styles.elevationImage]}>
               <Animated.Image
-                source={image}
+                source={ImgMusic}
                 style={[styles.musicImage, {transform: [{rotate: RotateData}]}]}
               />
             </View>
