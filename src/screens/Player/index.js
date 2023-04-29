@@ -9,7 +9,7 @@ import {
   ScrollView,
   FlatList,
   Animated,
-  Button
+  Button,
 } from 'react-native';
 import styles from './styles';
 import ImgMusic from '../../assets/akatsuki.png';
@@ -70,19 +70,14 @@ export default function Player({navigation}) {
 
   function togglePlayPause() {
     if (sound.isPlaying() == false) {
-      sound.play(setisPlaying(true));
-     
-
-
-    }  else {
-      
-      sound.pause(setisPlaying(true));
-      
-
-      
-    }}
-
-    /*if(sound.isPlaying == true){
+      sound.play();
+      setisPlaying(true);
+    } else {
+      sound.pause();
+      setisPlaying(false);
+    }
+  }
+  /*if(sound.isPlaying == true){
       sound.pause();
       setisPlaying(false)
     }
@@ -91,12 +86,12 @@ export default function Player({navigation}) {
       setisPlaying(true);
     }
   }*/
-  const audioFile = new AudioFile(som, AudioFile.MAIN_BUNDLE, (error) => {
+  const audioFile = new AudioFile(som, AudioFile.MAIN_BUNDLE, error => {
     if (error) {
       console.log('Falha ao carregar a imagem:', error);
       return;
     }
-  
+
     const metadata = audioFile.getDuration();
     const albumCover = metadata?.tag?.picture;
   });
@@ -147,18 +142,15 @@ export default function Player({navigation}) {
             <TouchableOpacity>
               <Icon2 name="skip-previous" size={60} color={'#fff'} />
             </TouchableOpacity>
-           {/* funcao de controle do player*/}
-          
-          
-           <TouchableOpacity onPress={togglePlayPause}>
-    {setisPlaying == true ? (
-      <Icon name="play" size={50} color="#fff" />
-    ) : (
-      <Icon name="pause" size={50} color="#fff" />
-    )}
-  </TouchableOpacity>
+            {/* funcao de controle do player*/}
 
-
+            <TouchableOpacity onPress={togglePlayPause}>
+              {isplaying ? (
+                <Icon name="play" size={50} color="#fff" />
+              ) : (
+                <Icon name="pause" size={50} color="#fff" />
+              )}
+            </TouchableOpacity>
 
             <TouchableOpacity>
               <Icon2 name="skip-next" size={60} color={'#fff'} />
