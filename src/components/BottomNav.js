@@ -9,14 +9,14 @@ export default function BottomNav({activepage, navigation}) {
       {activepage == 'AllMusics' ? (
         <Icon
           name="music-box-multiple"
-          size={50}
+          size={40}
           color={'#fff'}
           style={styles.iconActivate}
         />
       ) : (
         <Icon
           name="music-box-multiple"
-          size={50}
+          size={40}
           color={'#fff'}
           style={styles.icon}
           onPress={() => navigation.navigate('AllMusics')}
@@ -25,14 +25,14 @@ export default function BottomNav({activepage, navigation}) {
       {activepage == 'Player' ? (
         <Icon
           name="headphones"
-          size={50}
+          size={40}
           color={'#fff'}
           style={styles.iconActivate}
         />
       ) : (
         <Icon
           name="headphones"
-          size={50}
+          size={40}
           color={'#fff'}
           style={styles.icon}
           onPress={() => navigation.navigate('Player')}
@@ -42,14 +42,14 @@ export default function BottomNav({activepage, navigation}) {
       {activepage == 'AllPlaylists' ? (
         <Icon
           name="playlist-play"
-          size={50}
+          size={40}
           color={'#fff'}
           style={styles.iconActivate}
         />
       ) : (
         <Icon
           name="playlist-play"
-          size={50}
+          size={40}
           color={'#fff'}
           style={styles.icon}
           onPress={() => navigation.navigate('AllPlaylists')}
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-around',
     alignItems: 'flex-end',
     backgroundColor: '#000',
     borderTopRightRadius: 20,
@@ -80,6 +80,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     position: 'absolute',
     padding: 10,
-    left: '40%',
+    left: '43%',
   },
 });
