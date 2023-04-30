@@ -10,7 +10,7 @@ export default function Splash({navigation}) {
        
         setTimeout(() => {
             navigation.navigate('Enter');
-        }, 7000); // tempo em milissegundos
+        }, 3000); // tempo em milissegundos
       }, []);
   
     return (
