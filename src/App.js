@@ -7,6 +7,7 @@ import MusicPlayer from '../src/screens/MusicPlayer';
 import AllPlaylists from './screens/AllPlaylists';
 import AllMusics from '../src/screens/AllMusics';
 import Player from '../src/screens/Player';
+import Splash from '../src/screens/Splash/splashScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -16,7 +17,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <StatusBar barStyle={'light-content'} />
-      <Stack.Navigator initialRouteName="Enter">
+      <Stack.Navigator initialRouteName="Splash">
+      <Stack.Screen
+          name="Splash"
+          component={Splash}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen
           name="Enter"
           component={Enter}

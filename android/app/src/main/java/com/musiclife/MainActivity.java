@@ -5,6 +5,10 @@ import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
 
+import android.os.Bundle;
+import com.facebook.react.ReactActivity;
+import org.devio.rn.splashscreen.SplashScreen; // importe a classe
+
 public class MainActivity extends ReactActivity {
 
   /**
@@ -16,6 +20,11 @@ public class MainActivity extends ReactActivity {
     return "MusicLife";
   }
 
+   @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    SplashScreen.show(this, R.style.SplashScreenTheme); // adicione esta linha
+    super.onCreate(savedInstanceState);
+  }
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. Here we use a util class {@link
    * DefaultReactActivityDelegate} which allows you to easily enable Fabric and Concurrent React
