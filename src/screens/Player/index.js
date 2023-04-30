@@ -12,7 +12,7 @@ import {
   Button,
 } from 'react-native';
 import styles from './styles';
-import ImgMusic from '../../assets/akatsuki.png';
+import ImgMusic from '../../assets/ML.jpg';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import Slider from '@react-native-community/slider';
@@ -38,7 +38,7 @@ export default function Player({navigation}) {
     rotateValueHolder.setValue(0);
     Animated.timing(rotateValueHolder, {
       toValue: 1,
-      duration: 3000,
+      duration: 4000,
       useNativeDriver: false,
     }).start(() => startImageRotateFunction());
   };
@@ -48,7 +48,7 @@ export default function Player({navigation}) {
       startImageRotateFunction();
     } else {
       rotateValueHolder.setValue(0);
-      rotateValueHolder.stopAnimation();
+      rotateValueHolder.pauseAnimation();
     }
   }, [isplaying]);
 
