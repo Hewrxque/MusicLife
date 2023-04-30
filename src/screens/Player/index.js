@@ -38,7 +38,7 @@ export default function Player({navigation}) {
     rotateValueHolder.setValue(0);
     Animated.timing(rotateValueHolder, {
       toValue: 1,
-      duration: 4000,
+      duration: 3000,
       useNativeDriver: false,
     }).start(() => startImageRotateFunction());
   };
@@ -48,7 +48,7 @@ export default function Player({navigation}) {
       startImageRotateFunction();
     } else {
       rotateValueHolder.setValue(0);
-      rotateValueHolder.pauseAnimation();
+      rotateValueHolder.stopAnimation();
     }
   }, [isplaying]);
 

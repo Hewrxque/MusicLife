@@ -11,24 +11,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    marginHorizontal: 10,
   },
-  content1: {
-    flex: 0.5,
 
-    alignItems: 'center',
-  },
   imgMusics: {
-    width: 90,
+    width: ' 20%',
     borderRadius: 15,
     height: 80,
-    marginRight: 220,
   },
   item: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 10,
-
-    width: '99%',
+    width: 390,
     marginVertical: 2,
     backgroundColor: '#000',
     borderRadius: 20,
@@ -36,6 +31,25 @@ const styles = StyleSheet.create({
   textMusic: {
     fontSize: 16,
     color: '#fff',
+  },
+  image: {
+    width: '10%',
+    height: 38,
+  },
+  textTitle: {
+    fontSize: 20,
+    color: '#00FF00',
+  },
+  contentTitle: {
+    width: '100%',
+    height: 70,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderColor: '#000',
+    flexDirection: 'row',
+    marginBottom: 10,
+    marginHorizontal: 10,
   },
 });
 export default styles;

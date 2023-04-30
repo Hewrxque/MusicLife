@@ -18,16 +18,16 @@ export default function Enter({navigation}) {
           <Image style={styles.image} source={Logo} />
         </View>
         <View style={styles.content1}>
-          <TouchableOpacity
+       {/*    <TouchableOpacity
             style={styles.buttonLogin}
             onPress={() => navigation.navigate('Login')}>
             <Text style={styles.textLogin}>Login</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.buttonRegistration} onPress={() => navigation.navigate('Registration')}>
             <Text style={styles.textRegistration}>Realizar Cadastro</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
           <TouchableOpacity style={styles.buttonConvidate} onPress={() => navigation.navigate('AllMusics')}>
-            <Text style={styles.textConvidate}>Entrar como convidado</Text>
+            <Text style={styles.textConvidate}>Começar</Text>
           </TouchableOpacity>
         </View>
      

@@ -45,9 +45,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   buttonConvidate: {
+    width: '90%',
+    height: 50,
+    borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 30,
+    borderColor: '#00FF00',
+    borderWidth: 1
   },
   textLogin: {
     color: '#00FF00',
@@ -58,8 +63,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   textConvidate: {
-    color: '#FFFFFF',
-    fontSize: 16,
+    color: '#fff',
+    fontSize: 20,
   },
 });
 export default styles;

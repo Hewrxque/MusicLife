@@ -57,8 +57,7 @@ export default function App() {
           name="MusicPlayer"
           component={MusicPlayer}
           options={{
-            headerShown: false,
-          }}
+            headerShown: false,          }}
         />
         <Stack.Screen
           name="AllMusics"
@@ -79,7 +78,11 @@ export default function App() {
           name="Player"
           component={Player}
           options={{
-            headerShown: false,
+            headerShown: true,
+            headerTransparent: true,
+            title: '',
+            
+            headerTintColor: '#FFFFFF',
           }}
         />
       </Stack.Navigator>
