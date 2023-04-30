@@ -86,15 +86,6 @@ export default function Player({navigation}) {
       setisPlaying(true);
     }
   }*/
-  const audioFile = new AudioFile(som, AudioFile.MAIN_BUNDLE, error => {
-    if (error) {
-      console.log('Falha ao carregar a imagem:', error);
-      return;
-    }
-
-    const metadata = audioFile.getDuration();
-    const albumCover = metadata?.tag?.picture;
-  });
   return (
     <ScrollView>
       <SafeAreaView style={styles.container}>
