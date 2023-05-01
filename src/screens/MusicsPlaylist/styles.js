@@ -34,12 +34,13 @@ const styles = StyleSheet.create({
     marginLeft: 20
   },
   image: {
-    width: 50,
-    height: 50,
+    width: '10%',
+    height: 38,
   },
   textTitle: {
     fontSize: 20,
     color: '#fff',
+    marginLeft: 220
   },
   contentTitle: {
     width: '100%',
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     flexDirection: 'row',
     marginBottom: 10,
-    marginHorizontal: 10,
+    marginHorizontal: 20,
   },
 });
 export default styles;

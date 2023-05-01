@@ -7,20 +7,50 @@ const styles = StyleSheet.create({
     width: width,
     backgroundColor: '#202020',
   },
-
   content: {
     flex: 1,
-    marginHorizontal: 10,
-    marginVertical: 10,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
-  },
-  content1: {
-    flex: 0.5,
     marginHorizontal: 10,
-    marginVertical: 10,
-    alignItems: 'center',
   },
 
+  imgMusics: {
+    width: 80,
+    borderRadius: 200,
+    height: 80,
+  },
+  item: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 30,
+    width: 390,
+    marginVertical: 2,
+    backgroundColor: '#000',
+    borderRadius: 20,
+  },
+  textMusic: {
+    fontSize: 16,
+    color: '#fff',
+    marginLeft: 20
+  },
+  image: {
+    width: 50,
+    height: 50,
+  },
+  textTitle: {
+    fontSize: 20,
+    color: '#fff',
+  },
+  contentTitle: {
+    width: '100%',
+    height: 70,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderColor: '#000',
+    flexDirection: 'row',
+    marginBottom: 10,
+    marginHorizontal: 10,
+  },
 });
 export default styles;

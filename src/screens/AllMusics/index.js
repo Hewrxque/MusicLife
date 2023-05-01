@@ -12,13 +12,8 @@ import {
   ScrollView,
 } from 'react-native';
 import styles from './styles';
-
-import LinearGradient from 'react-native-linear-gradient';
 import BottomNav from '../../components/BottomNav';
-import Sound from 'react-native-sound';
-import Logo from '../../assets/ML.png';
-
-
+import Logo from '../../assets/LogoW.png';
 
 
 export default function AllMusics({navigation}) {

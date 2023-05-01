@@ -8,6 +8,7 @@ import AllPlaylists from './screens/AllPlaylists';
 import AllMusics from '../src/screens/AllMusics';
 import Player from '../src/screens/Player';
 import Splash from '../src/screens/Splash/splashScreen';
+import MusicsPlaylist from '../src/screens/MusicsPlaylist'
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -77,6 +78,17 @@ export default function App() {
         <Stack.Screen
           name="Player"
           component={Player}
+          options={{
+            headerShown: true,
+            headerTransparent: true,
+            title: '',
+            
+            headerTintColor: '#FFFFFF',
+          }}
+        />
+         <Stack.Screen
+          name="MusicsPlaylist"
+          component={MusicsPlaylist}
           options={{
             headerShown: true,
             headerTransparent: true,
