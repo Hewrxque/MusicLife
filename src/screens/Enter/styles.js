@@ -22,8 +22,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    width: '70%',
-    height:'90%',
+    width: '66%',
+    height: '69%',
   },
   buttonRegistration: {
     backgroundColor: '#00FF00',
