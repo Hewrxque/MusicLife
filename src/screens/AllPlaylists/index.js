@@ -17,7 +17,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import BottomNav from '../../components/BottomNav';
 import Sound from 'react-native-sound';
 import Logo from '../../assets/LogoW.png';
-
+import Icon from 'react-native-vector-icons/Ionicons'
 
 
 
@@ -38,6 +38,8 @@ export default function AllPlaylists({navigation}) {
         <View style={styles.contentTitle}>
         <Image style={styles.image} source={Logo} />
         <Text style={styles.textTitle}>Playlists</Text>
+        <TouchableOpacity><Icon name='add-outline' size={50}  color={'#fff'}/></TouchableOpacity>
+        
         </View>
         <FlatList
           data={Musics}

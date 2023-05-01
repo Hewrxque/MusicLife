@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     width: 390,
     marginVertical: 2,
     backgroundColor: '#000',
-    borderRadius: 20,
+    borderRadius: 10,
   },
   textMusic: {
     fontSize: 16,
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   contentTitle: {
     width: '100%',
-    height: 70,
+    height: 50,
     justifyContent: 'space-between',
     alignItems: 'center',
     borderBottomWidth: 1,
