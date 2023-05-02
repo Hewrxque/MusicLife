@@ -27,11 +27,14 @@ const styles = StyleSheet.create({
     marginVertical: 2,
     backgroundColor: '#000',
     borderRadius: 10,
+    justifyContent: 'space-between',
+    paddingHorizontal: 8
   },
   textMusic: {
     fontSize: 16,
     color: '#fff',
-    marginLeft: 20
+    marginLeft: 20,
+    width: 200
   },
   image: {
     width: 50,
@@ -52,5 +55,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginHorizontal: 10,
   },
+  buttonPlay_Pause:{
+    marginHorizontal: 10, position: 'relative'
+  }
 });
 export default styles;
