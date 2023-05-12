@@ -1,9 +1,9 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
-import Login from '../src/screens/Login';
-import Enter from '../src/screens/Enter';
-import Registration from '../src/screens/Registration';
-import MusicPlayer from '../src/screens/MusicPlayer';
+import Login from './screens/setScreens/Login';
+import Enter from './screens/setScreens/Enter';
+import Registration from './screens/setScreens/Registration';
+
 import AllPlaylists from './screens/AllPlaylists';
 import AllMusics from '../src/screens/AllMusics';
 import Player from '../src/screens/Player';
@@ -54,12 +54,7 @@ export default function App() {
             headerTintColor: '#FFFFFF',
           }}
         />
-        <Stack.Screen
-          name="MusicPlayer"
-          component={MusicPlayer}
-          options={{
-            headerShown: false,          }}
-        />
+   
         <Stack.Screen
           name="AllMusics"
           component={AllMusics}
