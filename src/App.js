@@ -8,7 +8,7 @@ import MusicsPlaylist from '../src/screens/MusicsPlaylist'
 
 
 import Route from "../src/routes/routes"
-const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
