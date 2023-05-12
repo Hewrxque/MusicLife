@@ -33,7 +33,7 @@ export default function BottomTab({navigation}) {
           return <Icon name={iconName} size={size} color={color} />;
         },
         tabBarLabelPosition: 'beside-icon',
-        tabBarActiveTintColor: '#FFFFFF',
+        tabBarActiveTintColor: '#00FF00',
         tabBarInactiveTintColor: '#FFFFFF',
         tabBarLabel: '',
       })}>
