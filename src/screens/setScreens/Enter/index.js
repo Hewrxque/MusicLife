@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import styles from './styles';
 import Logo from '../../../assets/ML.png';
-import LinearGradient from 'react-native-linear-gradient';
 export default function Enter({navigation}) {
   return (
     <SafeAreaView style={styles.container}>
