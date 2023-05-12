@@ -5,14 +5,10 @@ import {
   SafeAreaView,
   Image,
   TouchableOpacity,
-  TextInput,
   FlatList,
-  ListItem,
-  Button,
-  ScrollView,
 } from 'react-native';
 import styles from './styles';
-import BottomNav from '../../components/BottomNav';
+
 import Logo from '../../assets/LogoW.png';
 import Sound from 'react-native-sound';
 import som from '../../sounds/set.mp3';

@@ -5,21 +5,15 @@ import {
   SafeAreaView,
   Image,
   TouchableOpacity,
-  TextInput,
   ScrollView,
-  FlatList,
   Animated,
-  Button,
 } from 'react-native';
 import styles from './styles';
 import ImgMusic from '../../assets/ML.jpg';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import Slider from '@react-native-community/slider';
-import BottomNav from '../../components/BottomNav';
-import {transform} from 'typescript';
 import Sound from 'react-native-sound';
-import AudioFile from 'react-native-sound';
 import som from '../../sounds/set.mp3';
 export default function Player({navigation}) {
   const renderSongs = ({index, item}) => {
