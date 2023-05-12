@@ -71,9 +71,6 @@ export default function AllMusics({navigation}) {
           
         />
       </View>
-      <View>
-        <BottomNav activepage={'AllMusics'} navigation={navigation} />
-      </View>
     </SafeAreaView>
   );
 }

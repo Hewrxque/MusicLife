@@ -148,11 +148,6 @@ export default function Player({navigation}) {
             </TouchableOpacity>
           </View>
         </View>
-        {/* área dos botoes de controle */}
-
-        <View>
-          <BottomNav activepage={'Player'} navigation={navigation} />
-        </View>
       </SafeAreaView>
     </ScrollView>
   );

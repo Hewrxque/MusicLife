@@ -46,9 +46,6 @@ export default function AllPlaylists({navigation}) {
           
         />
       </View>
-      <View>
-        <BottomNav activepage={'AllPlaylists'} navigation={navigation} />
-      </View>
     </SafeAreaView>
   );
 }

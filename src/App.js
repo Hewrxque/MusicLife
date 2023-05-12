@@ -3,96 +3,15 @@ import {StatusBar} from 'react-native';
 import Login from './screens/setScreens/Login';
 import Enter from './screens/setScreens/Enter';
 import Registration from './screens/setScreens/Registration';
-
-import AllPlaylists from './screens/AllPlaylists';
-import AllMusics from '../src/screens/AllMusics';
-import Player from '../src/screens/Player';
 import Splash from '../src/screens/Splash/splashScreen';
 import MusicsPlaylist from '../src/screens/MusicsPlaylist'
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+
+import Route from "../src/routes/routes"
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <StatusBar barStyle={'dark-content'} backgroundColor={"#00ff00"}/>
-      <Stack.Navigator initialRouteName="Splash">
-      <Stack.Screen
-          name="Splash"
-          component={Splash}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="Enter"
-          component={Enter}
-          options={{
-            headerShown: false,
-          }}
-        />
-
-        <Stack.Screen
-          name="Login"
-          component={Login}
-          options={{
-            headerShown: true,
-            headerTransparent: true,
-            title: '',
-            headerTintColor: '#FFFFFF',
-          }}
-        />
-        <Stack.Screen
-          name="Registration"
-          component={Registration}
-          options={{
-            headerShown: true,
-            headerTransparent: true,
-            title: '',
-            headerTintColor: '#FFFFFF',
-          }}
-        />
-   
-        <Stack.Screen
-          name="AllMusics"
-          component={AllMusics}
-          options={{
-            headerShown: false,
-          }}
-        />
-
-        <Stack.Screen
-          name="AllPlaylists"
-          component={AllPlaylists}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="Player"
-          component={Player}
-          options={{
-            headerShown: true,
-            headerTransparent: true,
-            title: '',
-            
-            headerTintColor: '#FFFFFF',
-          }}
-        />
-         <Stack.Screen
-          name="MusicsPlaylist"
-          component={MusicsPlaylist}
-          options={{
-            headerShown: true,
-            headerTransparent: true,
-            title: '',
-            
-            headerTintColor: '#FFFFFF',
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Route/>
   );
 }
