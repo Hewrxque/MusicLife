@@ -3,8 +3,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import AllPlaylists from '../../screens/AllPlaylists';
 import AllMusics from '../../screens/AllMusics';
 import Player from '../../screens/Player';
-
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 const player = 'Player';
 const allMusics = 'AllMusics';
