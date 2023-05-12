@@ -3,7 +3,6 @@ import AppNav from './AppNav/AppNav';
 
 export default function () {
   return (
-
         <AppNav />
   );
 }
