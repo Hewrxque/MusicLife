@@ -6,14 +6,15 @@ import Player from '../../screens/Player';
 import MusicsPlaylist from '../../screens/MusicsPlaylist';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomTab from '../BottomTab/BottomTab';
-
+import Splash from '../../screens/Splash/splashScreen'
 const { Navigator, Screen } = createNativeStackNavigator();
 
 
 
 export default function StackScreen({ }) {
   return (
-    <Navigator initialRouteName='BottomTab' screenOptions={{ headerShown: false }}>
+    <Navigator initialRouteName='Splash' screenOptions={{ headerShown: false }}>
+       <Screen name="Splash" component={Splash} />
       <Screen name="BottomTab" component={BottomTab} />
       <Screen name="AllPlaylists" component={AllPlaylists} />
       <Screen name="AllMusics" component={AllMusics} />

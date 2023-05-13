@@ -23,7 +23,8 @@ function TopTab({navigation}) {
       tabBarStyle: { backgroundColor: '#00FF00' },
       tabBarActiveTintColor: '#FFFFFF',
         tabBarInactiveTintColor: '#000000',
-        tabBarIndicatorStyle: {backgroundColor: '#fff'}
+        tabBarIndicatorStyle: {backgroundColor: '#fff'},
+        tabBarPressColor: '#000'
     }}
   >
       <Lab.Screen name="Player" component={Player} />

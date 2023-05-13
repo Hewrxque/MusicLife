@@ -81,7 +81,6 @@ export default function Player({navigation}) {
     }
   }*/
   return (
-    <ScrollView>
       <SafeAreaView style={styles.container}>
         <View style={styles.content}>
           {/* área da imagem */}
@@ -143,6 +142,5 @@ export default function Player({navigation}) {
           </View>
         </View>
       </SafeAreaView>
-    </ScrollView>
   );
 }

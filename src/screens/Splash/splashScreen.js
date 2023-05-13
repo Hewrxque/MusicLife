@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
-import Logo from '../../assets/ML.png'
+import Logo from '../../assets/LogoB.png'
 
 export default function Splash({navigation}) {
     
@@ -9,7 +9,7 @@ export default function Splash({navigation}) {
     useEffect(() => {
        
         setTimeout(() => {
-            navigation.navigate('Enter');
+            navigation.navigate('BottomTab');
         }, 3000); // tempo em milissegundos
       }, []);
   
@@ -24,7 +24,7 @@ export default function Splash({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#202020',
+    backgroundColor: '#00FF00',
     justifyContent: 'center',
     alignItems: 'center',
   },
