@@ -55,13 +55,14 @@ export default function AllMusics({navigation}) {
   );
   return (
     <SafeAreaView style={styles.container}>
+      <View style={{marginVertical: 10}}>
         <FlatList
           data={Musics}
           renderItem={renderItem}
           keyExtractor={item => item.id.toString()}
           
         />
-    
+    </View>
     </SafeAreaView>
   );
 }
