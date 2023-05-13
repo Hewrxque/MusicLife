@@ -24,11 +24,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
     width: 390,
-    marginVertical: 2,
+    marginVertical: 5,
     backgroundColor: '#000',
     borderRadius: 10,
     justifyContent: 'space-between',
-    paddingHorizontal: 8
+    paddingHorizontal: 8,
+    marginHorizontal: 10
   },
   textMusic: {
     fontSize: 16,

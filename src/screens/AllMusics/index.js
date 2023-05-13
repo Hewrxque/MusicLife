@@ -55,18 +55,13 @@ export default function AllMusics({navigation}) {
   );
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <View style={styles.contentTitle}>
-        <Image style={styles.image} source={Logo} />
-        <Text style={styles.textTitle}>Suas Músicas</Text>
-        </View>
         <FlatList
           data={Musics}
           renderItem={renderItem}
           keyExtractor={item => item.id.toString()}
           
         />
-      </View>
+    
     </SafeAreaView>
   );
 }
