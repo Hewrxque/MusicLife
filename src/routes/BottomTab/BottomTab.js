@@ -4,7 +4,7 @@ import AllPlaylists from '../../screens/AllPlaylists';
 import AllMusics from '../../screens/AllMusics';
 import Player from '../../screens/Player';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import MusicsPlaylist from '../../screens/MusicsPlaylist';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 
 const Lab = createMaterialTopTabNavigator();
@@ -28,7 +28,7 @@ function TopTab({navigation}) {
     }}
   >
       <Lab.Screen name="Player" component={Player} />
-      <Lab.Screen name="AllMusics" component={AllMusics} />
+      <Lab.Screen name="Playlist" component={MusicsPlaylist} />
     </Lab.Navigator>
   );
 }
