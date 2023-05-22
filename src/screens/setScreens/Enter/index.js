@@ -18,16 +18,13 @@ export default function Login({navigation}) {
      
         <View style={styles.content}>
           <Image style={styles.image} source={Logo} />
-        </View>
-        <View style={styles.content1}>
-          <TextInput style={styles.input} placeholder="Email" />
-          <TextInput style={styles.input} placeholder="Senha" />
-          <TouchableOpacity style={{marginLeft: 200}}>
-            <Text>Esqueci minha senha</Text>
+          </View>
+          <View style={styles.content1}>
+          <TouchableOpacity style={styles.buttonLogin}  onPress={() => navigation.navigate('Login')}>
+            <Text style={styles.textLogin}>Login</Text>
           </TouchableOpacity>
-
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('BottomTab')}>
-            <Text style={styles.text}>Login</Text>
+          <TouchableOpacity style={styles.buttonRegister}  onPress={() => navigation.navigate('Register')}>
+            <Text style={styles.textRegister}>Cadastro</Text>
           </TouchableOpacity>
         </View>
      

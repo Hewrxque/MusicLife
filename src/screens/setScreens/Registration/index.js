@@ -23,7 +23,7 @@ export default function Registration({navigation}) {
           <TextInput style={styles.input} placeholder="Nome Completo" />
           <TextInput style={styles.input} placeholder="Email" />
           <TextInput style={styles.input} placeholder="Senha" />
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
             <Text style={styles.text}>Realizar Cadastro</Text>
           </TouchableOpacity>
         </View>

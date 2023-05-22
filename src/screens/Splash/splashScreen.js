@@ -9,7 +9,7 @@ export default function Splash({navigation}) {
     useEffect(() => {
        
         setTimeout(() => {
-            navigation.navigate('BottomTab');
+            navigation.navigate('Enter');
         }, 3000); // tempo em milissegundos
       }, []);
   
