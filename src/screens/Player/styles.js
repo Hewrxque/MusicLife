@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   //Imagem
   imageWrapper: {
     width: '70%',
-    height: '72%',
+    height: '71%',
     marginHorizontal: 10,
     marginVertical: 10,
   },

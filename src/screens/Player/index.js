@@ -30,8 +30,8 @@ export default function Player({navigation}) {
       </Animated.View>
     );
   };
-  //Animacao da imagem
-  let rotateValueHolder = new Animated.Value(0);
+ 
+  let rotateValueHolder = new Animated.Value(0); //Animacao da imagem
   const startImageRotateFunction = () => {
     rotateValueHolder.setValue(0);
     Animated.timing(rotateValueHolder, {
@@ -54,8 +54,8 @@ export default function Player({navigation}) {
     inputRange: [0, 1],
     outputRange: [`0deg`, `360deg`],
   });
-  // controle do play ou pause
-  const handleSound = () => {
+  
+  const handleSound = () => {// controle do play ou pause
     if (isplaying) {
       sound.pause();
     } else {
@@ -65,7 +65,7 @@ export default function Player({navigation}) {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container}> 
       <View style={styles.content}>
         {/* área da imagem */}
 
