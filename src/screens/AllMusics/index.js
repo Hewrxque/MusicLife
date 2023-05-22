@@ -26,8 +26,8 @@ export default function AllMusics({navigation}) {
     }
     setisPlaying(!isplaying);
   };
-  const playIcon = <Icon name="play" size={50} color="#fff" />;
-  const pauseIcon = <Icon name="pause" size={50} color="#fff" />;
+  const playIcon = <Icon name="play" size={30} color="#fff" />;
+  const pauseIcon = <Icon name="pause" size={30} color="#fff" />;
   const Musics = [
     {id: 1, name: 'Akatsuki', image: require('../../assets/akat.jpg')},
     {id: 2, name: 'Joji', image: require('../../assets/joji.jpg')},

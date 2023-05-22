@@ -1,11 +1,10 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
   SafeAreaView,
   Image,
   TouchableOpacity,
-  ScrollView,
   Animated,
 } from 'react-native';
 import styles from './styles';
@@ -17,6 +16,11 @@ import Sound from 'react-native-sound';
 import som from '../../sounds/set.mp3';
 
 export default function Player({navigation}) {
+  const [isplaying, setisPlaying] = useState(false);
+  const [sound, setSound] = useState(new Sound(som, Sound.MAIN_BUNDLE));
+  const playIcon = <Icon name="play" size={50} color="#fff" />;
+  const pauseIcon = <Icon name="pause" size={50} color="#fff" />;
+
   const renderSongs = ({index, item}) => {
     return (
       <Animated.View style={styles.mainWrapper}>
@@ -26,7 +30,6 @@ export default function Player({navigation}) {
       </Animated.View>
     );
   };
-
   //Animacao da imagem
   let rotateValueHolder = new Animated.Value(0);
   const startImageRotateFunction = () => {
@@ -51,15 +54,7 @@ export default function Player({navigation}) {
     inputRange: [0, 1],
     outputRange: [`0deg`, `360deg`],
   });
-  //Final da animacao da imagem
-
   // controle do play ou pause
-  const [isplaying, setisPlaying] = useState(false);
-  const [sound, setSound] = useState(new Sound(som, Sound.MAIN_BUNDLE));
-  const playIcon = <Icon name="play" size={50} color="#fff" />;
-  const pauseIcon = <Icon name="pause" size={50} color="#fff" />;
-  const [icon, setIcon] = useState(0);
-
   const handleSound = () => {
     if (isplaying) {
       sound.pause();

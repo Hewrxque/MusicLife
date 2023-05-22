@@ -10,21 +10,14 @@ const styles = StyleSheet.create({
 
   content: {
     flex: 1,
-   // marginHorizontal: 10,
-   // marginVertical: 10,
+    marginHorizontal: 10,
+    marginVertical: 10,
     justifyContent: 'center',
-    alignItems: 'center',
-  },
-  content1: {
-    flex: 0.6,
-  // marginHorizontal: 10,
-   // marginVertical: 10,
     alignItems: 'center',
   },
   //Botoes 
   buttonContainer: {
     width: width,
-    paddingVertical: 15,
     marginVertical: 10,
     alignItems: 'center',
     borderTopColor: '#FFFFFF',
@@ -37,14 +30,16 @@ const styles = StyleSheet.create({
   },
   //Imagem
   imageWrapper: {
-    width: 350,
-    height: 350,
-    marginBottom: 25,
+    width: '70%',
+    height: '72%',
+    marginHorizontal: 10,
+    marginVertical: 10,
   },
   musicImage: {
     width: '100%',
     height: '100%',
     borderRadius: 1000,
+    marginVertical: 10,
   },
   elevationImage: {
     elevation: 5,
@@ -53,7 +48,6 @@ const styles = StyleSheet.create({
     width: width,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 25,
   },
   //Título da Música e Artista
   songContent: {
@@ -74,8 +68,7 @@ const styles = StyleSheet.create({
   progressBar:{
     width: 350,
     height: 40,
-    marginTop: 25,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   durationMusic:{
     flexDirection: 'row',
@@ -98,25 +91,3 @@ const styles = StyleSheet.create({
   }
 });
 export default styles;
-/*
- {isplaying == false ? (
-              <TouchableOpacity>
-                <Icon2
-                  name="play"
-                  size={80}
-                  color={'#00FF00'}
-                  //onPress={() => setisPlaying(true)}
-                  onPress={playSound}
-                />
-              </TouchableOpacity>
-            ) : (
-              <TouchableOpacity>
-                <Icon2
-                  name="pause"
-                  size={80}
-                  color={'#00FF00'}
-                  onPress={() => setisPlaying(false)}
-                />
-              </TouchableOpacity>
-            )}
-            */
