@@ -16,23 +16,18 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 export default function AllMusics({navigation}) {
   const [isplaying, setisPlaying] = useState(true);
-  const sound = new Sound(som, Sound.MAIN_BUNDLE, error => {
-    if (error) {
-      console.log('Falha ao carregar o som', error);
-      return;
-    }
-    console.log('Loaded sound!');
-  });
+  const [sound, setSound] = useState(new Sound(som, Sound.MAIN_BUNDLE));
 
-  function togglePlayPause() {
-    if (sound.isPlaying() == false) {
-      sound.play();
-      setisPlaying(true);
-    } else {
+  const handleSound = () => {
+    if (isplaying) {
       sound.pause();
-      setisPlaying(false);
+    } else {
+      sound.play();
     }
-  }
+    setisPlaying(!isplaying);
+  };
+  const playIcon = <Icon name="play" size={50} color="#fff" />;
+  const pauseIcon = <Icon name="pause" size={50} color="#fff" />;
   const Musics = [
     {id: 1, name: 'Akatsuki', image: require('../../assets/akat.jpg')},
     {id: 2, name: 'Joji', image: require('../../assets/joji.jpg')},
@@ -43,12 +38,9 @@ export default function AllMusics({navigation}) {
       <Image source={item.image} style={styles.imgMusics} />
       <Text style={styles.textMusic}>{item.name}</Text>
     
-      <TouchableOpacity style={styles.buttonPlay_Pause} onPress={togglePlayPause}>
-              {isplaying ? (
-                <Icon name="play" size={30} color="#fff" />
-              ) : (
-                <Icon name="pause" size={30} color="#fff" />
-              )}
+      <TouchableOpacity style={styles.buttonPlay_Pause} onPress={handleSound}>
+      {isplaying ? pauseIcon : playIcon}
+          
             </TouchableOpacity>
     </TouchableOpacity>
     
