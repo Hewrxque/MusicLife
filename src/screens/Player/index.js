@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -43,11 +43,13 @@ const songs = [
   // Add more songs here
 ];
 
-export default function Player({ navigation }) {
+export default function Player({navigation}) {
   const [isplaying, setisPlaying] = useState(false);
   const [sound, setSound] = useState(new Sound(som, Sound.MAIN_BUNDLE));
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const currentSong = songs[currentSongIndex];
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   const playIcon = <Icon name="play" size={50} color="#fff" />;
   const pauseIcon = <Icon name="pause" size={50} color="#fff" />;
@@ -61,6 +63,20 @@ export default function Player({ navigation }) {
       useNativeDriver: false,
     }).start(() => startImageRotateFunction());
   };
+
+  useEffect(() => {
+    if (sound) {
+      sound.getCurrentTime(seconds => setCurrentTime(seconds));
+      sound.getDuration(seconds => setDuration(seconds));
+      sound.play();
+    }
+
+    return () => {
+      if (sound) {
+        sound.stop();
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (isplaying) {
@@ -99,6 +115,14 @@ export default function Player({ navigation }) {
     setisPlaying(false);
   };
 
+  const formatTime = time => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes < 10 ? '0' : ''}${minutes}:${
+      seconds < 10 ? '0' : ''
+    }${seconds}`;
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
@@ -107,32 +131,37 @@ export default function Player({ navigation }) {
           <View style={[styles.imageWrapper, styles.elevationImage]}>
             <Animated.Image
               source={currentSong.artwork}
-              style={[styles.musicImage, { transform: [{ rotate: RotateData }] }]}
+              style={[styles.musicImage, {transform: [{rotate: RotateData}]}]}
             />
           </View>
         </View>
 
         {/* área de texto da música*/}
         <View>
-          <Text style={[styles.songTitle, styles.songContent]}>{currentSong.title}</Text>
-          <Text style={[styles.songArtist, styles.songContent]}>{currentSong.artist}</Text>
+          <Text style={[styles.songTitle, styles.songContent]}>
+            {currentSong.title}
+          </Text>
+          <Text style={[styles.songArtist, styles.songContent]}>
+            {currentSong.artist}
+          </Text>
         </View>
 
         {/* duraçao da música */}
         <View>
           <Slider
             style={styles.progressBar}
-            value={10}
+            value={currentTime}
             minimumValue={0}
-            maximumValue={100}
+            maximumValue={duration}
             minimumTrackTintColor="#00FF00"
             maximumTrackTintColor="#FFFFFF"
             thumbTintColor="#00FF00"
-            onSlidingComplete={() => {}}
+            onValueChange={value => setCurrentTime(value)}
+            onSlidingComplete={value => sound.setCurrentTime(value)}
           />
           <View style={styles.durationMusic}>
-            <Text style={styles.durationText}>00:00</Text>
-            <Text style={styles.durationText}>10:00</Text>
+            <Text style={styles.durationText}>{formatTime(currentTime)}</Text>
+            <Text style={styles.durationText}>{formatTime(duration)}</Text>
           </View>
         </View>
         {/* área dos botões de controle das músicas */}
