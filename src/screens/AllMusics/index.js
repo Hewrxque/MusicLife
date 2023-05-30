@@ -34,7 +34,7 @@ export default function AllMusics({navigation}) {
     {id: 3, name: 'LinkinPark', image: require('../../assets/linkinpark.jpg')},
   ];
   const renderItem = ({item}) => (
-    <TouchableOpacity style={styles.item}  onPress={() => navigation.navigate('TopTab', { itemId: item.id, itemName: item.name })}>
+    <TouchableOpacity style={styles.item}  onPress={() => navigation.navigate('PlayerMusic', { itemId: item.id, itemName: item.name })}>
       <Image source={item.image} style={styles.imgMusics} />
       <Text style={styles.textMusic}>{item.name}</Text>
     

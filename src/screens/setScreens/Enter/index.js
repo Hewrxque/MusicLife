@@ -26,6 +26,9 @@ export default function Login({navigation}) {
           <TouchableOpacity style={styles.buttonRegister}  onPress={() => navigation.navigate('Registration')}>
             <Text style={styles.textRegister}>Cadastro</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={styles.start}  onPress={() => navigation.navigate('BottomTab')}>
+            <Text style={styles.textStart}>Começar sem Login</Text>
+          </TouchableOpacity>
         </View>
      
     </SafeAreaView>

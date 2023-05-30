@@ -56,11 +56,26 @@ const styles = StyleSheet.create({
         marginTop: 20,
       
     },
+    start:{
+        borderWidth: 1,
+        borderColor: "#00FF00",
+        width: "90%",
+        height: 50,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 20,
+      
+    },
     textLogin:{
         color: '#00FF00',
         fontSize: 16
     },
     textRegister:{
+        color: '#000',
+        fontSize: 16
+    },
+    textStart:{
         color: '#000',
         fontSize: 16
     }
