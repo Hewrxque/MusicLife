@@ -44,24 +44,18 @@ export default function AllMusics() {
       }
       setIsPlaying(true);
       newSound.play();
-      navigation.navigate('PlayerMusic', { music: newSound });
+      navigation.navigate('PlayerMusic', );
     });
 
     setSound(newSound);
   };
 
-  const playIcon = <Icon name="play" size={30} color="#fff" />;
-  const pauseIcon = <Icon name="pause" size={30} color="#fff" />;
-
   const renderItem = ({ item }) => (
-    <TouchableOpacity
-      style={styles.item}
-      onPress={() => handleSound(item.audio)}>
-      <Image source={item.image} style={styles.imgMusics} />
-      <Text style={styles.textMusic}>{item.name}</Text>
-      <TouchableOpacity style={styles.buttonPlay_Pause} onPress={() => handleSound(item.audio)}>
-        {isPlaying ? pauseIcon : playIcon}
-      </TouchableOpacity>
+    <TouchableOpacity style={styles.item}  onPress={() => navigation.navigate('PlayerMusic', { itemId: item.id, itemName: item.name })}>
+    <Image source={item.image} style={styles.imgMusics} />
+    <Text style={styles.textMusic}>{item.name}</Text>
+  
+    
     </TouchableOpacity>
   );
 
