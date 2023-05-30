@@ -1,44 +1,77 @@
-import React from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  FlatList,
-  ListItem,
-  Button,
-  ScrollView,
-} from 'react-native';
-import styles from './styles';
+import React, { useState } from 'react';
+import { View, Text, SafeAreaView, Image, TouchableOpacity, FlatList } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Sound from 'react-native-sound';
-import Logo from '../../assets/ML.png';
+import styles from './styles';
+import Icon from 'react-native-vector-icons/Ionicons';
 
+const Musics = [
+  {
+    id: 1,
+    name: 'Sex, drugs',
+    image: require('../../assets/Sex.jpg'),
+    audio: require('../../sounds/sex.mp3'),
+  },
+  {
+    id: 2,
+    name: 'Londres',
+    image: require('../../assets/Londres.jpg'),
+    audio: require('../../sounds/Londres.mp3'),
+  },
+  {
+    id: 3,
+    name: 'Rap da Akatsuki',
+    image: require('../../assets/akatsuki.png'),
+    audio: require('../../sounds/Akatsuki.mp3'),
+  },
+];
 
-export default function AllPlaylists({navigation}) {
-  const Musics = [
-    {id: 1, name: 'Akatsuki', image: require('../../assets/akat.jpg')},
-    {id: 2, name: 'Joji', image: require('../../assets/joji.jpg')},
-    {id: 3, name: 'LinkinPark', image: require('../../assets/linkinpark.jpg')},
-  ];
-  const renderItem = ({item}) => (
-    <TouchableOpacity style={styles.item}  onPress={() => navigation.navigate('Player', { itemId: item.id, itemName: item.name })}>
+export default function MusicsPlaylist() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [sound, setSound] = useState(null);
+  const navigation = useNavigation();
+
+  const handleSound = (audio) => {
+    if (sound) {
+      sound.stop();
+      sound.release();
+    }
+
+    const newSound = new Sound(audio, '', (error) => {
+      if (error) {
+        console.log('Error loading audio:', error);
+        return;
+      }
+      setIsPlaying(true);
+      newSound.play();
+      navigation.navigate('PlayerMusic', { music: newSound });
+    });
+
+    setSound(newSound);
+  };
+
+  const playIcon = <Icon name="play" size={30} color="#fff" />;
+  const pauseIcon = <Icon name="pause" size={30} color="#fff" />;
+
+  const renderItem = ({ item }) => (
+    <TouchableOpacity
+      style={styles.item}
+      onPress={() => handleSound(item.audio)}>
       <Image source={item.image} style={styles.imgMusics} />
       <Text style={styles.textMusic}>{item.name}</Text>
+      <TouchableOpacity style={styles.buttonPlay_Pause} onPress={() => handleSound(item.audio)}>
+        {isPlaying ? pauseIcon : playIcon}
+      </TouchableOpacity>
     </TouchableOpacity>
   );
+
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <View style={styles.contentTitle}>
-        <Text style={styles.textTitle}>Nome PlayList</Text>
-        </View>
+      <View style={{ marginVertical: 10 }}>
         <FlatList
           data={Musics}
           renderItem={renderItem}
-          keyExtractor={item => item.id.toString()}
-          
+          keyExtractor={(item) => item.id.toString()}
         />
       </View>
     </SafeAreaView>

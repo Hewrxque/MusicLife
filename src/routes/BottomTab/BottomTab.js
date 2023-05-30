@@ -35,7 +35,7 @@ function PlayerMusic({navigation}) {
 export default function BottomTab({navigation}) {
   return (
     <Tab.Navigator
-      initialRouteName={allMusics}
+      initialRouteName={PlayerMusic}
       screenOptions={({route}) => ({
         headerShown: false,
         tabBarStyle: {backgroundColor: '#000'},
