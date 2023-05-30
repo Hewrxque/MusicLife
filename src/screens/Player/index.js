@@ -17,16 +17,28 @@ import som from '../../sounds/set.mp3';
 
 const songs = [
   {
-    title: 'Akatsuki.mp4',
-    artist: '7 Minutoz',
+    title: 'Set Fire x Another Love.mp4',
+    artist: 'Desconhecido',
     artwork: require('../../assets/ML.jpg'),
     audio: require('../../sounds/set.mp3'),
   },
   {
-    title: 'Song 2',
-    artist: 'Artist 2',
-    artwork: require('../../assets/ML.jpg'),
+    title: 'Sex, drugs',
+    artist: 'Desconhecido',
+    artwork: require('../../assets/Sex.jpg'),
     audio: require('../../sounds/sex.mp3'),
+  },
+  {
+    title: 'Rap da Akatsuki',
+    artist: '7 Minutoz',
+    artwork: require('../../assets/akatsuki.png'),
+    audio: require('../../sounds/Akatsuki.mp3'),
+  },
+  {
+    title: 'Terror em Londres',
+    artist: 'Enygma',
+    artwork: require('../../assets/Londres.jpg'),
+    audio: require('../../sounds/Londres.mp3'),
   },
   // Add more songs here
 ];
