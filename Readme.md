@@ -1,6 +1,7 @@
 # MusicLife
 
 ![Descrição da imagem](./src/assets/ML.png)
+
 Atualmente esse é o repositório do MusicLife. Aqui estão os passos que você precisa seguir depois de clonar o projeto em sua máquina.
 
 ## Pré-requisitos
