@@ -19,15 +19,15 @@ export default function PlayerMusic({navigation}) {
   return (
     <Lab.Navigator
       screenOptions={{
-        tabBarLabelStyle: {fontSize: 12},
-        tabBarStyle: {backgroundColor: '#00FF00'},
-        tabBarActiveTintColor: '#000000',
-        tabBarInactiveTintColor: '#000000',
-        tabBarIndicatorStyle: {backgroundColor: '#000000', borderWidth: 3},
+        tabBarLabelStyle: {fontSize: 10},
+        tabBarStyle: {backgroundColor: '#000000'},
+        tabBarActiveTintColor: '#fff', 
+        tabBarInactiveTintColor: '#fff',
+        tabBarIndicatorStyle: {backgroundColor: '#fff'},
         tabBarPressColor: '#000000',
       }}>
       <Lab.Screen name="Player" component={Player} />
-      <Lab.Screen name="Playlist" component={MusicsPlaylist} />
+      <Lab.Screen name="Faixas" component={MusicsPlaylist} />
     </Lab.Navigator>
   );
 }

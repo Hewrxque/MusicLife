@@ -1,11 +1,14 @@
 import {StyleSheet, Dimensions} from 'react-native';
+
 const {height, width} = Dimensions.get('window');
+const isDarkMode = true; // Defina essa variável como true ou false, dependendo do estado do modo dark
+
 const styles = StyleSheet.create({
     container:{
     flex: 1,
     height: height,
     width: width,
-    backgroundColor: '#202020'
+    backgroundColor: isDarkMode ? '#202020' : '#FFFFFF',
     },
     content:{
     flex: 0.4,
@@ -21,20 +24,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
     },
     image: {
-        width: "51%",
+        width: 200,
         height: 200
     },
     input:{
         borderBottomWidth: 1,
-        borderBottomColor: "#FFFFFF",
+        borderBottomColor: isDarkMode ? '#FFFFFF' : '#000000', 
         width: "90%",
         height: 50,
         margin: 10,
-        color: "#FFFFFF",
+        color: isDarkMode ? '#FFFFFF' : '#000000',
         paddingHorizontal: 8
     },
     button:{
-        backgroundColor: "#00FF00",
+        backgroundColor: isDarkMode ? '#FFFFFF' : '#000000',
         width: "90%",
         height: 50,
         borderRadius: 10,
@@ -44,7 +47,7 @@ const styles = StyleSheet.create({
       
     },
     text:{
-        color: '#000',
+        color: isDarkMode ? '#000000' : '#FFFFFF',
         fontSize: 16
     }
     

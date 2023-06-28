@@ -15,27 +15,28 @@ const styles = StyleSheet.create({
   },
 
   imgMusics: {
-    width: ' 20%',
+    width: '15%',
     borderRadius: 15,
-    height: 80,
+    height: '100%',
+    padding: '8%',
   },
   item: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 10,
-    width: 390,
-    marginVertical: 5,
+    padding: 20,
+    width: '95%',
+    marginVertical: 1,
     backgroundColor: '#000',
     borderRadius: 10,
     justifyContent: 'space-between',
     paddingHorizontal: 8,
-    marginHorizontal: 10
+    marginHorizontal: 10,
   },
   textMusic: {
     fontSize: 16,
     color: '#fff',
     marginLeft: 20,
-    width: 200
+    width: 200,
   },
   image: {
     width: 50,
@@ -56,8 +57,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginHorizontal: 10,
   },
-  buttonPlay_Pause:{
-    marginHorizontal: 10, position: 'relative'
-  }
+  buttonPlay_Pause: {
+    marginHorizontal: 10,
+    position: 'relative',
+  },
 });
 export default styles;

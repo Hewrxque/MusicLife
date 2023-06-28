@@ -11,8 +11,7 @@ import {
 } from 'react-native';
 import axios from 'axios';
 import styles from './styles';
-import Logo from '../../../assets/ML.png';
-import LinearGradient from 'react-native-linear-gradient';
+import Logo from '../../../assets/LogoW.png';
 
 export default function Registration({ navigation }) {
   const [fullName, setFullName] = useState('');

@@ -24,6 +24,42 @@ const Musics = [
     image: require('../../assets/akatsuki.png'),
     audio: require('../../sounds/Akatsuki.mp3'),
   },
+  {
+    id: 4,
+    name: 'Sex, drugs',
+    image: require('../../assets/Sex.jpg'),
+    audio: require('../../sounds/sex.mp3'),
+  },
+  {
+    id: 5,
+    name: 'Londres',
+    image: require('../../assets/Londres.jpg'),
+    audio: require('../../sounds/Londres.mp3'),
+  },
+  {
+    id: 6,
+    name: 'Rap da Akatsuki',
+    image: require('../../assets/akatsuki.png'),
+    audio: require('../../sounds/Akatsuki.mp3'),
+  },
+  {
+    id: 7,
+    name: 'Sex, drugs',
+    image: require('../../assets/Sex.jpg'),
+    audio: require('../../sounds/sex.mp3'),
+  },
+  {
+    id: 8,
+    name: 'Londres',
+    image: require('../../assets/Londres.jpg'),
+    audio: require('../../sounds/Londres.mp3'),
+  },
+  {
+    id: 9,
+    name: 'Rap da Akatsuki',
+    image: require('../../assets/akatsuki.png'),
+    audio: require('../../sounds/Akatsuki.mp3'),
+  },
 ];
 
 export default function MusicsPlaylist() {
@@ -50,18 +86,13 @@ export default function MusicsPlaylist() {
     setSound(newSound);
   };
 
-  const playIcon = <Icon name="play" size={30} color="#fff" />;
-  const pauseIcon = <Icon name="pause" size={30} color="#fff" />;
-
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={styles.item}
-      onPress={() => handleSound(item.audio)}>
+      onPress={() => navigation.navigate('Player', { itemId: item.id, itemName: item.name })}>
       <Image source={item.image} style={styles.imgMusics} />
       <Text style={styles.textMusic}>{item.name}</Text>
-      <TouchableOpacity style={styles.buttonPlay_Pause} onPress={() => handleSound(item.audio)}>
-        {isPlaying ? pauseIcon : playIcon}
-      </TouchableOpacity>
+    
     </TouchableOpacity>
   );
 

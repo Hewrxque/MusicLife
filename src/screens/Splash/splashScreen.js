@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
-import Logo from '../../assets/LogoB.png'
+import Logo from '../../assets/LogoW.png'
 
 export default function Splash({navigation}) {
     
@@ -24,7 +24,7 @@ export default function Splash({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00FF00',
+    backgroundColor: '#000',
     justifyContent: 'center',
     alignItems: 'center',
   },

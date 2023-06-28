@@ -9,7 +9,7 @@ import {
   ScrollView
 } from 'react-native';
 import styles from './styles';
-import Logo from '../../../assets/ML.png';
+import Logo from '../../../assets/LogoW.png';
 import LinearGradient from 'react-native-linear-gradient';
 export default function Login({navigation}) {
   return (

@@ -153,9 +153,9 @@ export default function Player({navigation}) {
             value={currentTime}
             minimumValue={0}
             maximumValue={duration}
-            minimumTrackTintColor="#00FF00"
+            minimumTrackTintColor="#FFFFFF"
             maximumTrackTintColor="#FFFFFF"
-            thumbTintColor="#00FF00"
+            thumbTintColor="#FFFFFF"
             onValueChange={value => setCurrentTime(value)}
             onSlidingComplete={value => sound.setCurrentTime(value)}
           />
