@@ -4,7 +4,7 @@ import AllPlaylists from '../../screens/AllPlaylists';
 import AllMusics from '../../screens/AllMusics';
 import Player from '../../screens/Player';
 import MusicsPlaylist from '../../screens/MusicsPlaylist';
-import BottomTab from '../BottomTab/BottomTab';
+import PlayerMusic from '../BottomTab/BottomTab';
 import Splash from '../../screens/Splash/splashScreen'
 import Login from '../../screens/setScreens/Login'
 import Enter from '../../screens/setScreens/Enter'
@@ -23,7 +23,7 @@ export default function StackScreen({ }) {
        <Screen name="Enter" component={Enter} />
        <Screen name="Login" component={Login} />
        <Screen name="Registration" component={Registration} />
-      <Screen name="BottomTab" component={BottomTab} />
+      <Screen name="PlayerMusic" component={PlayerMusic} />
       <Screen name="AllPlaylists" component={AllPlaylists} />
       <Screen name="AllMusics" component={AllMusics} />
       <Screen name="Player" component={Player} />

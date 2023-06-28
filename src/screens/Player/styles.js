@@ -30,10 +30,10 @@ const styles = StyleSheet.create({
   },
   //Imagem
   imageWrapper: {
-    width: '85%',
-    height: '71%',
-    marginHorizontal: 10,
-    marginVertical: 10,
+    width: 250,
+    height: 250,
+    marginHorizontal: '2%',
+    marginVertical: '5%',
   },
   musicImage: {
     width: '100%',

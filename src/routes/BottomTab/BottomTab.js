@@ -15,7 +15,7 @@ const allPlaylists = 'AllPlaylists';
 
 const Tab = createBottomTabNavigator();
 
-function PlayerMusic({navigation}) {
+export default function PlayerMusic({navigation}) {
   return (
     <Lab.Navigator
       screenOptions={{
@@ -32,35 +32,35 @@ function PlayerMusic({navigation}) {
   );
 }
 
-export default function BottomTab({navigation}) {
-  return (
-    <Tab.Navigator
-      initialRouteName={PlayerMusic}
-      screenOptions={({route}) => ({
-        headerShown: false,
-        tabBarStyle: {backgroundColor: '#000'},
-        tabBarIcon: ({focused, color, size}) => {
-          let iconName;
-          let rn = route.name;
-          if (rn === player) {
-            iconName = focused ? 'headphones' : 'headphones';
-          } else if (rn === allMusics) {
-            iconName = focused ? 'music-box-multiple' : 'music-box-multiple';
-          } else if (rn === allPlaylists) {
-            iconName = focused ? 'playlist-play' : 'playlist-play';
-          }
+// export default function BottomTab({navigation}) {
+//   return (
+//     <Tab.Navigator
+//       initialRouteName={PlayerMusic}
+//       screenOptions={({route}) => ({
+//         headerShown: false,
+//         tabBarStyle: {backgroundColor: '#000'},
+//         tabBarIcon: ({focused, color, size}) => {
+//           let iconName;
+//           let rn = route.name;
+//           if (rn === player) {
+//             iconName = focused ? 'headphones' : 'headphones';
+//           } else if (rn === allMusics) {
+//             iconName = focused ? 'music-box-multiple' : 'music-box-multiple';
+//           } else if (rn === allPlaylists) {
+//             iconName = focused ? 'playlist-play' : 'playlist-play';
+//           }
 
-          return <Icon name={iconName} size={size} color={color} />;
-        },
-        tabBarLabelPosition: 'below-icon',
-        tabBarActiveTintColor: '#00FF00',
-        tabBarInactiveTintColor: '#FFFFFF',
-        tabBarAcitveLabel: '',
+//           return <Icon name={iconName} size={size} color={color} />;
+//         },
+//         tabBarLabelPosition: 'below-icon',
+//         tabBarActiveTintColor: '#00FF00',
+//         tabBarInactiveTintColor: '#FFFFFF',
+//         tabBarAcitveLabel: '',
         
-      })}>
-      <Tab.Screen name="PlayerMusic" component={PlayerMusic} />
-      <Tab.Screen name="AllMusics" component={AllMusics} />
-     {/*  <Tab.Screen name="AllPlaylists" component={AllPlaylists} /> */}
-    </Tab.Navigator>
-  );
-}
+//       })}>
+//       <Tab.Screen name="PlayerMusic" component={PlayerMusic} />
+//       <Tab.Screen name="AllMusics" component={AllMusics} />
+//      {/*  <Tab.Screen name="AllPlaylists" component={AllPlaylists} /> */}
+//     </Tab.Navigator>
+//   );
+// }
