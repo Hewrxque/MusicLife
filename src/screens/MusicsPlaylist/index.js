@@ -107,11 +107,13 @@ export default function MusicsPlaylist() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={{marginVertical: 10}}>
-        <FlatList
+       <View>
+       <FlatList
           data={Musics}
           renderItem={renderItem}
           keyExtractor={item => item.id.toString()}
         />
+       </View>
         <ControlButton />
       </View>
     </SafeAreaView>

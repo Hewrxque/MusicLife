@@ -11,12 +11,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 20,
     flexDirection: 'row',
-    marginTop: '128%',
+    top: '88%',
     justifyContent: 'space-between',
 
   },
   button: {
-    padding: 12,
+    padding: 15,
   },
   textButton: {
     color: '#000000',

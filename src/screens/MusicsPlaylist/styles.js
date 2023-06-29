@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     height: height,
     width: width,
     backgroundColor: '#202020',
+    
   },
   content: {
     flex: 1,
