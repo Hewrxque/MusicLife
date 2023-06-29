@@ -9,28 +9,28 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 
 const Lab = createMaterialTopTabNavigator();
 
-const player = 'PlayerMusic';
-const allMusics = 'AllMusics';
-const allPlaylists = 'AllPlaylists';
-
-const Tab = createBottomTabNavigator();
-
 export default function PlayerMusic({navigation}) {
   return (
     <Lab.Navigator
       screenOptions={{
         tabBarLabelStyle: {fontSize: 10},
         tabBarStyle: {backgroundColor: '#000000'},
-        tabBarActiveTintColor: '#fff', 
+        tabBarActiveTintColor: '#fff',
         tabBarInactiveTintColor: '#fff',
         tabBarIndicatorStyle: {backgroundColor: '#fff'},
         tabBarPressColor: '#000000',
       }}>
-      <Lab.Screen name="Player" component={Player} />
+      {/* <Lab.Screen name="Player" component={Player} /> */}
       <Lab.Screen name="Faixas" component={MusicsPlaylist} />
+      <Lab.Screen name="AllPlaylists" component={AllPlaylists} />
     </Lab.Navigator>
   );
 }
+// const player = 'PlayerMusic';
+// const allMusics = 'AllMusics';
+// const allPlaylists = 'AllPlaylists';
+
+// const Tab = createBottomTabNavigator();
 
 // export default function BottomTab({navigation}) {
 //   return (
@@ -56,7 +56,7 @@ export default function PlayerMusic({navigation}) {
 //         tabBarActiveTintColor: '#00FF00',
 //         tabBarInactiveTintColor: '#FFFFFF',
 //         tabBarAcitveLabel: '',
-        
+
 //       })}>
 //       <Tab.Screen name="PlayerMusic" component={PlayerMusic} />
 //       <Tab.Screen name="AllMusics" component={AllMusics} />

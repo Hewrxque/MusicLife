@@ -11,7 +11,7 @@ import {
 import styles from './styles';
 import Logo from '../../../assets/LogoW.png';
 import LinearGradient from 'react-native-linear-gradient';
-
+import Icon from 'react-native-vector-icons/Ionicons'
 export default function Login({navigation}) {
   const [email, setEmail] = useState('');
 const [senha, setSenha] = useState('');
@@ -53,6 +53,11 @@ const handleLogin = async () => {
     <ScrollView>
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
+      <TouchableOpacity
+            style={styles.goBackButton}
+            onPress={() => navigation.goBack()}>
+            <Icon name={'chevron-back-outline'} size={40} color={'#ffffff'} />
+          </TouchableOpacity>
         <Image style={styles.image} source={Logo} />
       </View>
       <View style={styles.content1}>

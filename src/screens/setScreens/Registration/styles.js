@@ -49,7 +49,10 @@ const styles = StyleSheet.create({
     text:{
         color: isDarkMode ? '#000000' : '#FFFFFF',
         fontSize: 16
-    }
+    },
+    goBackButton:{
+        marginRight: '90%'
+      }
     
 })
 export default styles;

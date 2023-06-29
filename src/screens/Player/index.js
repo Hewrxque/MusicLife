@@ -14,7 +14,7 @@ import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import Slider from '@react-native-community/slider';
 import Sound from 'react-native-sound';
 import som from '../../sounds/set.mp3';
-
+import LinearGradient from 'react-native-linear-gradient';
 const songs = [
   {
     title: 'Set Fire x Another Love.mp4',
@@ -125,8 +125,19 @@ export default function Player({navigation}) {
 
   return (
     <SafeAreaView style={styles.container}>
+        <LinearGradient 
+          colors={['#000000','#000000', '#00FFA0']} // Cores do gradiente
+        start={{ x: 0, y: 0 }} // Ponto inicial do gradiente (esquerda superior)
+        end={{ x: 1, y: 1 }} // Ponto final do gradiente (direita inferior)
+        style={styles.gradient}
+      >
       <View style={styles.content}>
         {/* área da imagem */}
+        <TouchableOpacity
+            style={styles.goBackButton}
+            onPress={() => navigation.goBack()}>
+            <Icon name={'chevron-down-outline'} size={40} color={'#ffffff'} />
+          </TouchableOpacity>
         <View style={styles.mainWrapper}>
           <View style={[styles.imageWrapper, styles.elevationImage]}>
             <Animated.Image
@@ -179,6 +190,7 @@ export default function Player({navigation}) {
           </TouchableOpacity>
         </View>
       </View>
+      </LinearGradient>
     </SafeAreaView>
   );
 }

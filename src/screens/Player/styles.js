@@ -88,6 +88,13 @@ const styles = StyleSheet.create({
     width: '65%',
     marginTop: 10,
     marginVertical: 20
-  }
+  },
+  goBackButton:{
+    marginRight: '90%'
+  },
+  gradient: {
+    flex: 1,
+    
+  },
 });
 export default styles;

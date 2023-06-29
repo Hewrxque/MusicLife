@@ -50,6 +50,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  goBackButton:{
+    marginRight: '90%'
+  }
 });
 
 export default styles;

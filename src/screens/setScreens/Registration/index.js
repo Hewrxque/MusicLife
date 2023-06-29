@@ -12,7 +12,7 @@ import {
 import axios from 'axios';
 import styles from './styles';
 import Logo from '../../../assets/LogoW.png';
-
+import Icon from 'react-native-vector-icons/Ionicons'
 export default function Registration({ navigation }) {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
@@ -38,6 +38,11 @@ export default function Registration({ navigation }) {
     <ScrollView>
       <SafeAreaView style={styles.container}>
         <View style={styles.content}>
+        <TouchableOpacity
+            style={styles.goBackButton}
+            onPress={() => navigation.goBack()}>
+            <Icon name={'chevron-back-outline'} size={40} color={'#ffffff'} />
+          </TouchableOpacity>
           <Image style={styles.image} source={Logo} />
         </View>
         <View style={styles.content1}>
