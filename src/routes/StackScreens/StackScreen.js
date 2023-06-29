@@ -9,12 +9,9 @@ import Splash from '../../screens/Splash/splashScreen'
 import Login from '../../screens/setScreens/Login'
 import Enter from '../../screens/setScreens/Enter'
 import Registration from '../../screens/setScreens/Registration'
-
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const { Navigator, Screen } = createNativeStackNavigator();
-
-
 
 export default function StackScreen({ }) {
   return (
