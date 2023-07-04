@@ -3,21 +3,19 @@ const {height, width} = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    position: 'absolute',
     width: '95%',
     marginHorizontal: 10,
-    justifyContent: 'center',
-    marginTop: '1%',
+    justifyContent: 'flex-end',
   },
   contentButton: {
     alignItems: 'center',
-    position: 'absolute',
     width: '100%',
+    position: 'absolute',
     backgroundColor: '#00FFA0',
     alignItems: 'center',
-    borderRadius: 20,
+    borderRadius: 15,
     flexDirection: 'row',
-    top: '88%',
+  
     justifyContent: 'space-between',
   },
   button: {
