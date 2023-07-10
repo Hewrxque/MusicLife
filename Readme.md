@@ -1,29 +1,44 @@
 # MusicLife
 
-![Descrição da imagem](./src/assets/ML.png)
+![Logo](./src/assets/ML.png)
 
-Atualmente esse é o repositório do MusicLife. Aqui estão os passos que você precisa seguir depois de clonar o projeto em sua máquina.
+MusicLife is a music player application that offers a unique experience to music lovers. With an intuitive interface and advanced features, the app allows users to enjoy their favorite music wherever they are.
 
-## Pré-requisitos
+## functionalities
 
-Certifique-se de ter instalado o seguinte em seu sistema:
+- Music Library
+- Music Playback
+- Offline Mode
+
+## Stack used
+
+**Front-end:** React-Native, Redux
+
+**Back-end:** Node, Express
+
+## Requisites
+Make sure you have the following installed on your system:
 
 - Node.js: https://nodejs.org
-- React Native CLI: Execute o comando `npm install -g react-native-cli` para instalar o React Native CLI globalmente.
-- Yarn 
+- React Native CLI: Run the command npm install -g react-native-cli to install the React Native CLI globally.
+Yarn
 
-## Configuração do Projeto
+## Project Setup
 
 ### ANDROID
 
-Siga as etapas abaixo para configurar o projeto em sua máquina:
+Follow the steps below to set up the project on your machine:
 
-1. Abra um terminal e navegue até o diretório raiz do projeto.
+1. Open a terminal and navigate to the project's root directory.
 
-2. Execute o comando `yarn install --force` para instalar as dependências do projeto.(caso possua yarn)
+2. Run the command yarn install --force to install the project dependencies. (if you have yarn)
 
-3. Execute o comando `npm install --force` para instalar as dependências do projeto.(caso possua npm)
+3. Run the command npm install --force to install the project dependencies. (if you have npm)
 
-4. Execute o comando `npx react-native run-android` para iniciar o aplicativo no dispositivo ou emulador Android.
-
+4. Run the command npx react-native run-android to start the application on an Android device or emulator.
+   
 ## Powered by Hewrxque
+
+## Authors
+
+- [@Hewrxque](https://www.github.com/Hewrxque)
