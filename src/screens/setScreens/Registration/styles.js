@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: height,
     width: width,
-    backgroundColor: isDarkMode ? '#202020' : '#FFFFFF',
+    backgroundColor: isDarkMode ? '#000000' : '#FFFFFF',
     },
     content:{
     flex: 0.4,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8
     },
     button:{
-        backgroundColor: isDarkMode ? '#FFFFFF' : '#000000',
+        backgroundColor: isDarkMode ? '#00FF8E' : '#000000',
         width: "90%",
         height: 50,
         borderRadius: 10,
@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
     },
     text:{
         color: isDarkMode ? '#000000' : '#FFFFFF',
-        fontSize: 16
+        fontSize: 16,
+        fontWeight: 700
     },
     goBackButton:{
         marginRight: '90%'

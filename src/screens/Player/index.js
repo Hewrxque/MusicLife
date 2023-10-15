@@ -131,13 +131,14 @@ export default function Player({navigation}) {
         end={{ x: 1, y: 1 }} // Ponto final do gradiente (direita inferior)
         style={styles.gradient}
       >
-      <View style={styles.content}>
-        {/* área da imagem */}
-        <TouchableOpacity
+          <TouchableOpacity
             style={styles.goBackButton}
             onPress={() => navigation.goBack()}>
             <Icon name={'chevron-down-outline'} size={40} color={'#ffffff'} />
           </TouchableOpacity>
+      <View style={styles.content}>
+        {/* área da imagem */}
+      
         <View style={styles.mainWrapper}>
           <View style={[styles.imageWrapper, styles.elevationImage]}>
             <Animated.Image

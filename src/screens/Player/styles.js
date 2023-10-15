@@ -90,7 +90,9 @@ const styles = StyleSheet.create({
     marginVertical: 20
   },
   goBackButton:{
-    marginRight: '90%'
+    marginHorizontal: '5%',
+    marginVertical: '2%',
+    //position: 'absolute'
   },
   gradient: {
     flex: 1,

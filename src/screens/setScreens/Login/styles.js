@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: height,
     width: width,
-    backgroundColor: isDarkMode ? '#202020' : '#FFFFFF', // Altera a cor de fundo com base no modo dark
+    backgroundColor: isDarkMode ? '#000000' : '#FFFFFF', // Altera a cor de fundo com base no modo dark
   },
   content: {
     flex: 0.4,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   button: {
-    backgroundColor: isDarkMode ? '#FFFFFF' : '#000000', // Altera a cor de fundo do botão com base no modo dark
+    backgroundColor: isDarkMode ? '#00FF8E' : '#000000', // Altera a cor de fundo do botão com base no modo dark
     width: '90%',
     height: 50,
     borderRadius: 10,

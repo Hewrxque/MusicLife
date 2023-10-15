@@ -5,9 +5,8 @@ const styles = StyleSheet.create({
     flex: 1,
     height: height,
     width: width,
-    backgroundColor: '#202020',
+    backgroundColor: '#000000',
   },
-
   content: {
     flex: 0.5,
     marginHorizontal: 10,
@@ -35,8 +34,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   buttonLogin: {
-    borderWidth: 1,
-    borderColor: '#FFFFFF',
+    backgroundColor: '#00FF8E',
     width: '90%',
     height: 50,
     borderRadius: 10,
@@ -54,8 +52,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   start: {
-  //borderWidth: 1,
-  //borderColor: '#FFFFFF',
     width: '90%',
     height: 50,
     borderRadius: 10,
@@ -64,17 +60,20 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   textLogin: {
-    color: '#FFFFFF',
+    color: '#000000',
     fontSize: 16,
+    fontWeight: 700,
   },
   textRegister: {
     color: '#000',
     fontSize: 16,
+    fontWeight: 700,
   },
   textStart: {
     color: '#FFFFFF',
     fontSize: 16,
-    fontWeight: 700
+    fontWeight: 700,
   },
 });
+
 export default styles;
