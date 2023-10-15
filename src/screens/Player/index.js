@@ -8,7 +8,6 @@ import {
   Animated,
 } from 'react-native';
 import styles from './styles';
-import ImgMusic from '../../assets/ML.jpg';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 import Slider from '@react-native-community/slider';
@@ -19,7 +18,7 @@ const songs = [
   {
     title: 'Set Fire x Another Love.mp4',
     artist: 'Desconhecido',
-    artwork: require('../../assets/ML.jpg'),
+    artwork: require('../../assets/discML.png'),
     audio: require('../../sounds/set.mp3'),
   },
   {
@@ -125,21 +124,23 @@ export default function Player({navigation}) {
 
   return (
     <SafeAreaView style={styles.container}>
-        <LinearGradient 
-          colors={['#000000','#000000', '#00FFA0']} // Cores do gradiente
-        start={{ x: 0, y: 0 }} // Ponto inicial do gradiente (esquerda superior)
-        end={{ x: 1, y: 1 }} // Ponto final do gradiente (direita inferior)
-        style={styles.gradient}
-      >
+      
           <TouchableOpacity
             style={styles.goBackButton}
             onPress={() => navigation.goBack()}>
             <Icon name={'chevron-down-outline'} size={40} color={'#ffffff'} />
           </TouchableOpacity>
-      <View style={styles.content}>
+
+     
         {/* área da imagem */}
-      
-        <View style={styles.mainWrapper}>
+    
+       <LinearGradient 
+          colors={['#00FF8E','#004426', '#000000']} // Cores do gradiente
+        start={{ x: 1, y: 0 }} // Ponto inicial do gradiente (esquerda superior)
+        end={{ x: 1, y: 1 }} // Ponto final do gradiente (direita inferior)
+        style={styles.gradient}
+      >
+      <View style={styles.mainWrapper}>
           <View style={[styles.imageWrapper, styles.elevationImage]}>
             <Animated.Image
               source={currentSong.artwork}
@@ -147,7 +148,19 @@ export default function Player({navigation}) {
             />
           </View>
         </View>
+        <View style={styles.musicButtonControl}>
+          <TouchableOpacity onPress={handlePreviousSong}>
+            <Icon2 name="skip-previous" size={60} color={'#fff'} />
+          </TouchableOpacity>
 
+          <TouchableOpacity onPress={handleSound} style={styles.play_pause}>
+            {isplaying ? pauseIcon : playIcon}
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={handleNextSong}>
+            <Icon2 name="skip-next" size={60} color={'#fff'} />
+          </TouchableOpacity>
+        </View>
         {/* área de texto da música*/}
         <View>
           <Text style={[styles.songTitle, styles.songContent]}>
@@ -177,21 +190,12 @@ export default function Player({navigation}) {
           </View>
         </View>
         {/* área dos botões de controle das músicas */}
-        <View style={styles.musicButtonControl}>
-          <TouchableOpacity onPress={handlePreviousSong}>
-            <Icon2 name="skip-previous" size={60} color={'#fff'} />
-          </TouchableOpacity>
+       
+        </LinearGradient>
+     
+      
+    
 
-          <TouchableOpacity onPress={handleSound}>
-            {isplaying ? pauseIcon : playIcon}
-          </TouchableOpacity>
-
-          <TouchableOpacity onPress={handleNextSong}>
-            <Icon2 name="skip-next" size={60} color={'#fff'} />
-          </TouchableOpacity>
-        </View>
-      </View>
-      </LinearGradient>
     </SafeAreaView>
   );
 }

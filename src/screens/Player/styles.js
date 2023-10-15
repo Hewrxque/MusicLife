@@ -5,17 +5,18 @@ const styles = StyleSheet.create({
     flex: 1,
     height: height,
     width: width,
-    backgroundColor: '#202020',
+    backgroundColor: '#000000',
   },
-
   content: {
-    flex: 1,
-    marginHorizontal: 10,
-    marginVertical: 10,
+    flex: 0.9,
+    marginHorizontal: 20,
+    marginVertical: 20,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#00FF8E',
+    borderRadius: 20,
   },
-  //Botoes 
+  //Botoes
   buttonContainer: {
     width: width,
     marginVertical: 10,
@@ -65,38 +66,50 @@ const styles = StyleSheet.create({
     fontWeight: '200',
   },
   //Área de duraçao da música
-  progressBar:{
+  progressBar: {
     width: 350,
     height: 40,
     flexDirection: 'row',
   },
-  durationMusic:{
+  durationMusic: {
     flexDirection: 'row',
     width: 350,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
-  durationText:{
+  durationText: {
     color: '#fff',
     fontSize: 12,
     fontWeight: '600',
   },
   //Área de controle entre as músicas
-  musicButtonControl:{
+  musicButtonControl: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '65%',
     marginTop: 10,
-    marginVertical: 20
+    marginVertical: 20,
   },
-  goBackButton:{
+  goBackButton: {
     marginHorizontal: '5%',
     marginVertical: '2%',
     //position: 'absolute'
   },
   gradient: {
-    flex: 1,
-    
+    flex: 0.9,
+    marginHorizontal: 20,
+    marginVertical: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#00FF8E',
+    borderRadius: 20,
+  },
+  play_pause: {
+    backgroundColor: '#00FF8E',
+    width: 80,
+    height: 80,
+    borderRadius: 600,
+    bottom: 50,
   },
 });
 export default styles;

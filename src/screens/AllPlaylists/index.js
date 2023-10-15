@@ -20,7 +20,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 
 export default function AllPlaylists({navigation}) {
   const Musics = [
-    {id: 1, name: 'Playlist', image: require('../../assets/ML.jpg')},
+    {id: 1, name: 'Playlist', image: require('../../assets/discML.png')},
 
   ];
   const renderItem = ({item}) => (
