@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '65%',
-    marginTop: 10,
+    width: '90%',
+    bottom: 50,
     marginVertical: 20,
   },
   goBackButton: {
@@ -109,7 +109,6 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: 600,
-    bottom: 50,
     justifyContent: 'center',
     alignItems: 'center'
   },
