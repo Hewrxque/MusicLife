@@ -110,6 +110,8 @@ const styles = StyleSheet.create({
     height: 80,
     borderRadius: 600,
     bottom: 50,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 });
 export default styles;
