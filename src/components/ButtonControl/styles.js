@@ -22,8 +22,9 @@ const styles = StyleSheet.create({
     padding: 15,
   },
   textButton: {
-    color: '#000000',
+    color: '#FFFFFF',
     fontSize: 20,
+    marginHorizontal: '10%'
   },
   imageButton: {
     width: 50,
@@ -37,6 +38,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '40%',
     marginVertical: 10,
+  },
+  gradient: {
+    alignItems: 'center',
+    width: '100%',
+   
+    backgroundColor: '#00FFA0',
+    alignItems: 'center',
+    borderRadius: 15,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   
 });
